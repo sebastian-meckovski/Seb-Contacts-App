@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Contacts App by Seb" Height="450" Width="600">
     <Grid>
+        <StackPanel>
+            <Button Content="Browse" Width="70" Click="Browse_Button_Click"/>
+        </StackPanel>
 
     </Grid>
 </Window>
