@@ -26,17 +26,5 @@ namespace SebContactsApp
         {
             InitializeComponent();
         }
-
-        private void Browse_Button_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Multiselect = true;
-            openFileDialog.ShowDialog();
-
-            Debug.WriteLine(openFileDialog.FileNames[0]);
-
-            // further testing to be continued
-
-        }
     }
 }

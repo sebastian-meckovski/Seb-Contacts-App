@@ -5,11 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SebContactsApp"
         mc:Ignorable="d"
-        Title="Contacts App by Seb" Height="450" Width="600">
+        Title="Contacts App by Seb" Height="450" Width="500">
     <Grid>
-        <StackPanel>
-            <Button Content="Browse" Width="70" Click="Browse_Button_Click"/>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="240"/>
+        </Grid.ColumnDefinitions>
+  
+        <ListView Grid.Row="0" Grid.Column="1" Background="Gray" Margin="5">
+            
+        </ListView>
 
+        <DockPanel Grid.Column="0" Grid.RowSpan="2">
+            <StackPanel>
+                <Label Content="Name:"/>
+                <Label Content="Surname:"/>
+                <Label Content="Address:"/>
+                <Label Content="Company:"/>
+
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Alister"/>
+                <Label Content="Alister"/>
+                <Label Content="Gresham street"/>
+                <Label Content="Apex Joinery Services"/>
+                
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>
