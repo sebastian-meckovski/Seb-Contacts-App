@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using SebContactsApp.Classes;
+using SQLite;
 
 namespace SebContactsApp
 {
@@ -22,9 +24,25 @@ namespace SebContactsApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Contact> contacts;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            contacts = new List<Contact>();
+
+            UpdateData();
+        }
+
+        private void UpdateData()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.databasePath))
+            {
+                conn.CreateTable<Contact>();
+                contacts = conn.Table<Contact>().ToList();
+                myListView.ItemsSource = contacts;
+            }
         }
     }
 }

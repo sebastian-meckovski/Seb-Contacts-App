@@ -5,7 +5,7 @@ using SQLite;
 
 namespace SebContactsApp.Classes
 {
-    class Contact
+    public class Contact
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
