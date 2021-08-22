@@ -44,5 +44,12 @@ namespace SebContactsApp
                 myListView.ItemsSource = contacts;
             }
         }
+
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewContactWindow addNewContactWindow = new AddNewContactWindow();
+
+            addNewContactWindow.Show();
+        }
     }
 }

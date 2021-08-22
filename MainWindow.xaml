@@ -33,7 +33,7 @@
         </ListView>
 
         <DockPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20 20 20 7">
-            <Button Content="Add" Height="20" Width="60" Margin="2"/>
+            <Button Content="Add" Height="20" Width="60" Margin="2" Click="Add_Button_Click"/>
             <Button Content="Edit" Height="20" Width="60" Margin="2"/>
             <Button Content="Delete" Height="20" Width="60" Margin="2"/>
         </DockPanel>
@@ -63,8 +63,5 @@
                 <Label Content="alsiter.mctavish@apex.co.uk"/>
             </StackPanel>
         </DockPanel>
-
-
-
     </Grid>
 </Window>
