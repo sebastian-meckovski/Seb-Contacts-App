@@ -29,9 +29,7 @@ namespace SebContactsApp
         public MainWindow()
         {
             InitializeComponent();
-
             contacts = new List<Contact>();
-
             UpdateData();
         }
 
@@ -49,7 +47,9 @@ namespace SebContactsApp
         {
             AddNewContactWindow addNewContactWindow = new AddNewContactWindow();
 
-            addNewContactWindow.Show();
+            addNewContactWindow.ShowDialog();
+
+            UpdateData();
         }
     }
 }

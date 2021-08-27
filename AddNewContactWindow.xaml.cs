@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SebContactsApp.Classes;
+using SQLite;
 
 namespace SebContactsApp
 {
@@ -20,6 +22,21 @@ namespace SebContactsApp
         public AddNewContactWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void Save_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Contact contact = new Contact();
+            contact.Name = nameBox.Text;
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.databasePath))
+            {
+                conn.Insert(contact);
+            }
+
+            Close();
+
         }
     }
 }

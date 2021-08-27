@@ -10,7 +10,7 @@
         <StackPanel Height="324" VerticalAlignment="Top">
             <DockPanel>
                 <Label Content="Name:" Width="75"/>
-                <TextBox Margin="5"/>
+                <TextBox Name="nameBox"  Margin="5"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Surname:" Width="75"/>
@@ -37,7 +37,7 @@
                 <TextBox Margin="5"/>
             </DockPanel>
             <DockPanel Margin="5" HorizontalAlignment="Center" Width="220">
-                <Button Content="Save" Margin="5" Width="100"/>
+                <Button Content="Save" Margin="5" Width="100" Click="Save_Button_Click"/>
                 <Button Content="Cancel" Margin="5" Width="100"/>
             </DockPanel>
         </StackPanel>
