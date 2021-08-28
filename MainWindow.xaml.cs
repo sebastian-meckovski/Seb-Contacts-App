@@ -54,8 +54,13 @@ namespace SebContactsApp
 
         private void Edit_Button_Click(object sender, RoutedEventArgs e)
         {
-            editContactWindow editContactWindow = new editContactWindow();
-            editContactWindow.ShowDialog();
+            Contact selectedItem = (Contact)myListView.SelectedItem;
+
+            if (selectedItem != null)
+            {
+                editContactWindow editContactWindow = new editContactWindow(selectedItem);
+                editContactWindow.ShowDialog();
+            }
             UpdateData();
         }
     }

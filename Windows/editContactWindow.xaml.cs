@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SebContactsApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,11 @@ namespace SebContactsApp
     /// </summary>
     public partial class editContactWindow : Window
     {
-        public editContactWindow()
+        public editContactWindow(Contact selectedContact)
         {
             InitializeComponent();
+
+            nameBox.Text = selectedContact.Name;
         }
     }
 }
