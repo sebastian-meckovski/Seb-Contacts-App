@@ -21,8 +21,7 @@ namespace SebContactsApp
     {
         public AddNewContactWindow()
         {
-            InitializeComponent();
-            
+            InitializeComponent();        
         }
 
         private void Save_Button_Click(object sender, RoutedEventArgs e)
@@ -30,14 +29,17 @@ namespace SebContactsApp
             Contact contact = new Contact();
             contact.Name = nameBox.Text;
             contact.Surname = surnameBox.Text;
+            contact.Address = addressBox.Text;
+            contact.Company = companyBox.Text;
+            contact.position = companyBox.Text;
+            contact.mobile = companyBox.Text;
+            contact.email = companyBox.Text;
 
             using (SQLiteConnection conn = new SQLiteConnection(App.databasePath))
             {
                 conn.Insert(contact);
             }
-
             Close();
-
         }
     }
 }

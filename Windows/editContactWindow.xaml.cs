@@ -18,11 +18,27 @@ namespace SebContactsApp
     /// </summary>
     public partial class editContactWindow : Window
     {
+        Contact selectedContact;
         public editContactWindow(Contact selectedContact)
         {
             InitializeComponent();
 
+            this.selectedContact = selectedContact;
+
             nameBox.Text = selectedContact.Name;
+            surnameBox.Text = selectedContact.Surname;
+        }
+
+        private void Edit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            selectedContact.Name = nameBox.Text;
+            selectedContact.Surname = surnameBox.Text;
+
+            using(SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
+            {
+                conn.Update(selectedContact);
+            }
+            Close();
         }
     }
 }

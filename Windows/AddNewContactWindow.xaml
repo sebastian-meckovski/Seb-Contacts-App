@@ -18,23 +18,23 @@
             </DockPanel>
             <DockPanel>
                 <Label Content="Address:" Width="75"/>
-                <TextBox Margin="5"/>
+                <TextBox Name="addressBox" Margin="5"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Company:" Width="75"/>
-                <TextBox Margin="5"/>
+                <TextBox x:Name="companyBox" Margin="5"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Position:" Width="75"/>
-                <TextBox Margin="5"/>
+                <TextBox Name="positionBox" Margin="5"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Mobile:" Width="75"/>
-                <TextBox Margin="5"/>
+                <TextBox Name="mobileBox" Margin="5"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Email::" Width="75"/>
-                <TextBox Margin="5"/>
+                <TextBox Name="emailBox" Margin="5"/>
             </DockPanel>
             <DockPanel Margin="5" HorizontalAlignment="Center" Width="220">
                 <Button Content="Save" Margin="5" Width="100" Click="Save_Button_Click"/>
