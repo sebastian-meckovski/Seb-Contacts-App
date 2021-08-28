@@ -10,6 +10,6 @@
         <DockPanel VerticalAlignment="Center">
             <TextBlock x:Name="nameTextBlock" Text="Name" Margin="3" FontSize="20"/>
             <TextBlock x:Name="surnameTextBlock" Text="Surname" Margin="3" FontSize="20"/>
-        </DockPanel>    
+        </DockPanel>
     </Grid>
 </UserControl>

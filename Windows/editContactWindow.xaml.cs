@@ -44,7 +44,7 @@ namespace SebContactsApp
             selectedContact.mobile = mobileBox.Text;
             selectedContact.email = emailBox.Text;
 
-            using(SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
             {
                 conn.Update(selectedContact);
             }

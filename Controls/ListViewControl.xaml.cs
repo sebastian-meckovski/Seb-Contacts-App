@@ -27,7 +27,7 @@ namespace SebContactsApp.Controls
 
         // Using a DependencyProperty as the backing store for Contact.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ContactProperty =
-            DependencyProperty.Register("Contact", typeof(Contact), typeof(ContentControl), new PropertyMetadata(new Contact() { Name = "Name", Surname = "Surname" }, SetText));
+            DependencyProperty.Register("Contact", typeof(Contact), typeof(ListViewControl), new PropertyMetadata(new Contact() { Name = "Name", Surname = "Surname" }, SetText));
 
         private static void SetText(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {

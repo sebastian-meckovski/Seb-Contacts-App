@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,7 +22,7 @@ namespace SebContactsApp
     {
         public AddNewContactWindow()
         {
-            InitializeComponent();        
+            InitializeComponent();
         }
 
         private void Save_Button_Click(object sender, RoutedEventArgs e)
@@ -39,11 +40,13 @@ namespace SebContactsApp
             {
                 conn.Insert(contact);
             }
+            Debug.WriteLine("SaveButton Clicked");
             Close();
         }
 
         private void Browse_Button_Click(object sender, RoutedEventArgs e)
         {
+            Debug.WriteLine("Browse button clicked");
             //using (var dialog1 = new System.Windows.Forms.FolderBrowserDialog())
             //{
             //    System.Windows.Forms.DialogResult result1 = dialog1.ShowDialog();
