@@ -50,6 +50,7 @@ namespace SebContactsApp
             addNewContactWindow.ShowDialog();
 
             UpdateData();
+            MakeSelection(myListView.Items.Count - 1);
         }
 
         private void Edit_Button_Click(object sender, RoutedEventArgs e)
@@ -65,6 +66,7 @@ namespace SebContactsApp
         private void editContact()
         {
             Contact selectedItem = (Contact)myListView.SelectedItem;
+            int selectedIndex = myListView.SelectedIndex;
 
             if (selectedItem != null)
             {
@@ -72,6 +74,7 @@ namespace SebContactsApp
                 editContactWindow.ShowDialog();
             }
             UpdateData();
+            MakeSelection(selectedIndex);
         }
 
         private void myListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -86,6 +89,48 @@ namespace SebContactsApp
                 postionLabel.Content = selectedItem.position;
                 mobileLabel.Content = selectedItem.mobile;
                 emailLabel.Content = selectedItem.email;
+            }
+        }
+
+        private void MakeSelection(int Index)
+        {
+            try
+            {
+                myListView.SelectedItem = myListView.Items[Index];
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                if (myListView.Items.Count > 0)
+                {
+                    myListView.SelectedItem = myListView.Items[myListView.Items.Count - 1];
+                }
+                else
+                {
+                    nameLabel.Content = "N/A";
+                    surnameLabel.Content = "N/A";
+                    addressLabel.Content = "N/A";
+                    companyLabel.Content = "N/A";
+                    postionLabel.Content = "N/A";
+                    mobileLabel.Content = "N/A";
+                    emailLabel.Content = "N/A";
+                }
+            }
+        }
+
+        private void Delete_Button_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedIndex = myListView.SelectedIndex;
+            deleteContact();
+            UpdateData();
+            MakeSelection(selectedIndex);
+        }
+
+        private void deleteContact()
+        {
+            Contact selectedContact = (Contact)myListView.SelectedItem;
+            using(SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
+            {
+                conn.Delete(selectedContact);
             }
         }
     }
