@@ -54,6 +54,16 @@ namespace SebContactsApp
 
         private void Edit_Button_Click(object sender, RoutedEventArgs e)
         {
+            editContact();
+        }
+
+        private void myListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            editContact();
+        }
+
+        private void editContact()
+        {
             Contact selectedItem = (Contact)myListView.SelectedItem;
 
             if (selectedItem != null)
@@ -62,6 +72,21 @@ namespace SebContactsApp
                 editContactWindow.ShowDialog();
             }
             UpdateData();
+        }
+
+        private void myListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Contact selectedItem = (Contact)myListView.SelectedItem;
+            if (selectedItem != null)
+            {
+                nameLabel.Content = selectedItem.Name;
+                surnameLabel.Content = selectedItem.Surname;
+                addressLabel.Content = selectedItem.Address;
+                companyLabel.Content = selectedItem.Company;
+                postionLabel.Content = selectedItem.position;
+                mobileLabel.Content = selectedItem.mobile;
+                emailLabel.Content = selectedItem.email;
+            }
         }
     }
 }

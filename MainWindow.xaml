@@ -24,7 +24,9 @@
                   Grid.RowSpan="4"
                   Grid.Column="1"
                   Background="LightGray"
-                  Margin="5 5 5 40">
+                  Margin="5 5 5 40"
+                  MouseDoubleClick="myListView_MouseDoubleClick"
+                  SelectionChanged="myListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <uc:ListViewControl Contact="{Binding}"/>
@@ -54,13 +56,13 @@
             </StackPanel>
 
             <StackPanel>
-                <Label Content="Alister"/>
-                <Label Content="McTavish"/>
-                <Label Content="Gresham street"/>
-                <Label Content="Apex Joinery Services"/>
-                <Label Content="Accountant"/>
-                <Label Content="01245 984651"/>
-                <Label Content="alsiter.mctavish@apex.co.uk"/>
+                <Label Content="Alister" Name="nameLabel"/>
+                <Label Content="McTavish" Name="surnameLabel"/>
+                <Label Content="Gresham street" Name="addressLabel"/>
+                <Label Content="Apex Joinery Services" Name="companyLabel"/>
+                <Label Content="Accountant" Name="postionLabel"/>
+                <Label Content="01245 984651" Name="mobileLabel"/>
+                <Label Content="alsiter.mctavish@apex.co.uk" Name="emailLabel"/>
             </StackPanel>
         </DockPanel>
     </Grid>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AddNewContactWindow" Height="300" Width="340">
     <Grid>
-        <StackPanel Height="324" VerticalAlignment="Top">
+        <StackPanel Height="284" VerticalAlignment="Center">
             <DockPanel>
                 <Label Content="Name:" Width="75"/>
                 <TextBox Name="nameBox"  Margin="5"/>
