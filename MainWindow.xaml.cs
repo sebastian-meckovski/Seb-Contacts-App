@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using SebContactsApp.Classes;
 using SQLite;
+using System.IO;
 
 namespace SebContactsApp
 {
@@ -28,6 +29,7 @@ namespace SebContactsApp
 
         public MainWindow()
         {
+            Directory.CreateDirectory($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\Contact data");  // why this function doesn't work in App.xaml.cs file?
             InitializeComponent();
             contacts = new List<Contact>();
             UpdateData();
