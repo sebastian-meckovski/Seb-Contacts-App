@@ -29,6 +29,7 @@ namespace SebContactsApp
         {
             Contact contact = new Contact();
             contact.Name = nameBox.Text;
+            contact.Surname = surnameBox.Text;
 
             using (SQLiteConnection conn = new SQLiteConnection(App.databasePath))
             {

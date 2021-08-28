@@ -14,7 +14,7 @@
             </DockPanel>
             <DockPanel>
                 <Label Content="Surname:" Width="75"/>
-                <TextBox Margin="5"/>
+                <TextBox Name="surnameBox" Margin="5"/>
             </DockPanel>
             <DockPanel>
                 <Label Content="Address:" Width="75"/>

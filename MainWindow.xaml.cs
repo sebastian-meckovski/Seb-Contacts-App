@@ -51,5 +51,12 @@ namespace SebContactsApp
 
             UpdateData();
         }
+
+        private void Edit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            editContactWindow editContactWindow = new editContactWindow();
+            editContactWindow.ShowDialog();
+            UpdateData();
+        }
     }
 }
