@@ -52,7 +52,7 @@ namespace SebContactsApp
             Debug.WriteLine("Browse button clicked");
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
-            //imageURLBox.Text = openFileDialog.FileName // Why is this not accesible
+            // imageURLBox.Text = openFileDialog.FileName; // Why is this not accesible
         }
     }
 }
