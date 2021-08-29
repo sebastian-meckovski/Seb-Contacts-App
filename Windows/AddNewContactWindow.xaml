@@ -41,7 +41,7 @@
                 <Label Content="Image: " Width="75"/>
                 <Grid>
                     <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
-                    <TextBox x:Name="imageURLBox" Text="{Binding imgURL}" Grid.Column="0" Margin="5" Height=""></TextBox>
+                    <TextBox x:Name="imageURLBox" Text="{Binding imgURL}" Grid.Column="0" Margin="5"></TextBox>
                     <Button HorizontalAlignment="Right" Width="25" Grid.Column="1"
                                         Margin="2" Content="..." Click="Browse_Button_Click">
                     </Button>

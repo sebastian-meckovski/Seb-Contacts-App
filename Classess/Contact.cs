@@ -19,8 +19,8 @@ namespace SebContactsApp.Classes
         public string Surname { get; set; }
         public string Address { get; set; }
         public string Company { get; set; }
-        public string position { get; set; }
-        public string mobile { get; set; }
+        public string Position { get; set; }
+        public string Mobile { get; set; }
 
         public string Email
         {

@@ -29,8 +29,8 @@ namespace SebContactsApp
             surnameBox.Text = selectedContact.Surname;
             adressBox.Text = selectedContact.Address;
             companyBox.Text = selectedContact.Company;
-            positionBox.Text = selectedContact.position;
-            mobileBox.Text = selectedContact.mobile;
+            positionBox.Text = selectedContact.Position;
+            mobileBox.Text = selectedContact.Mobile;
             emailBox.Text = selectedContact.Email;
         }
 
@@ -40,8 +40,8 @@ namespace SebContactsApp
             selectedContact.Surname = surnameBox.Text;
             selectedContact.Address = adressBox.Text;
             selectedContact.Company = companyBox.Text;
-            selectedContact.position = positionBox.Text;
-            selectedContact.mobile = mobileBox.Text;
+            selectedContact.Position = positionBox.Text;
+            selectedContact.Mobile = mobileBox.Text;
             selectedContact.Email = emailBox.Text;
 
             using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))

@@ -34,9 +34,9 @@ namespace SebContactsApp
             contact.Surname = surnameBox.Text;
             contact.Address = addressBox.Text;
             contact.Company = companyBox.Text;
-            contact.position = positionBox.Text;
-            contact.mobile = mobileBox.Text;
-            //contact.email = emailBox.Text;
+            contact.Position = positionBox.Text;
+            contact.Mobile = mobileBox.Text;
+            contact.Email = emailBox.Text;
 
             //contact.imgURL = imageURLBox.Text
 

@@ -88,8 +88,8 @@ namespace SebContactsApp
                 surnameLabel.Content = selectedItem.Surname;
                 addressLabel.Content = selectedItem.Address;
                 companyLabel.Content = selectedItem.Company;
-                postionLabel.Content = selectedItem.position;
-                mobileLabel.Content = selectedItem.mobile;
+                postionLabel.Content = selectedItem.Position;
+                mobileLabel.Content = selectedItem.Mobile;
                 emailLabel.Content = selectedItem.Email;
                 //imgURLpath.Source = selectedItem.imgURL;
                 if (selectedItem.imgURL != null)
