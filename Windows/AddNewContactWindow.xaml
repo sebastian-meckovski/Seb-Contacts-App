@@ -40,12 +40,12 @@
             <DockPanel>
                 <Label Content="Image: " Width="75"/>
 
-                <TextBox Name="imageURLBox" Margin="5">
+                <TextBox x:Name="hey"  Margin="5" Text="URL">
                     <TextBox.Template>
                         <ControlTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
-                                <TextBox Grid.Column="0"></TextBox>
+                                <TextBox Name="imageURLBox" Grid.Column="0" Text="THE URL"></TextBox>
                                 <Button HorizontalAlignment="Right" Width="20" Grid.Column="1"
                                         Margin="2" Content="..." Click="Browse_Button_Click">
                                 </Button>

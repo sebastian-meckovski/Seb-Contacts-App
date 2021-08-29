@@ -43,6 +43,7 @@
         </DockPanel>
 
         <Image Source="Images\defaultPicture.png"
+               x:Name="imgURLpath"
                Margin="5 5 5 60"
                Grid.RowSpan="2"/>
 
@@ -58,13 +59,13 @@
             </StackPanel>
 
             <StackPanel>
-                <Label Content="Alister" Name="nameLabel"/>
-                <Label Content="McTavish" Name="surnameLabel"/>
-                <Label Content="Gresham street" Name="addressLabel"/>
-                <Label Content="Apex Joinery Services" Name="companyLabel"/>
-                <Label Content="Accountant" Name="postionLabel"/>
-                <Label Content="01245 984651" Name="mobileLabel"/>
-                <Label Content="alsiter.mctavish@apex.co.uk" Name="emailLabel"/>
+                <Label Content="N/A" Name="nameLabel"/>
+                <Label Content="N/A" Name="surnameLabel"/>
+                <Label Content="N/A" Name="addressLabel"/>
+                <Label Content="N/A" Name="companyLabel"/>
+                <Label Content="N/A" Name="postionLabel"/>
+                <Label Content="N/A" Name="mobileLabel"/>
+                <Label Content="N/A" Name="emailLabel"/>
             </StackPanel>
         </DockPanel>
     </Grid>

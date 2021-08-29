@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -32,9 +33,11 @@ namespace SebContactsApp
             contact.Surname = surnameBox.Text;
             contact.Address = addressBox.Text;
             contact.Company = companyBox.Text;
-            contact.position = companyBox.Text;
-            contact.mobile = companyBox.Text;
-            contact.email = companyBox.Text;
+            contact.position = positionBox.Text;
+            contact.mobile = mobileBox.Text;
+            contact.email = emailBox.Text;
+            //contact.imgURL = imageURLBox.Text
+
 
             using (SQLiteConnection conn = new SQLiteConnection(App.databasePath))
             {
@@ -47,14 +50,9 @@ namespace SebContactsApp
         private void Browse_Button_Click(object sender, RoutedEventArgs e)
         {
             Debug.WriteLine("Browse button clicked");
-            //using (var dialog1 = new System.Windows.Forms.FolderBrowserDialog())
-            //{
-            //    System.Windows.Forms.DialogResult result1 = dialog1.ShowDialog();
-            //    if (result1 == System.Windows.Forms.DialogResult.OK)
-            //    {
-            //        outputFilePathLabel.Content = dialog1.SelectedPath;
-            //    }
-            //}
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+            //imageURLBox.Text = openFileDialog.FileName // Why is this not accesible
         }
     }
 }

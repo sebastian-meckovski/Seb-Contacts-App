@@ -16,5 +16,6 @@ namespace SebContactsApp.Classes
         public string position { get; set; }
         public string mobile { get; set; }
         public string email { get; set; }
+        public string imgURL { get; set; }
     }
 }

@@ -91,6 +91,11 @@ namespace SebContactsApp
                 postionLabel.Content = selectedItem.position;
                 mobileLabel.Content = selectedItem.mobile;
                 emailLabel.Content = selectedItem.email;
+                //imgURLpath.Source = selectedItem.imgURL;
+                if (selectedItem.imgURL != null)
+                {
+                    imgURLpath.Source = new BitmapImage(new Uri(selectedItem.imgURL));
+                }
             }
         }
 
