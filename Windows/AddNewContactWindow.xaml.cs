@@ -30,6 +30,8 @@ namespace SebContactsApp
         private void Save_Button_Click(object sender, RoutedEventArgs e)
         {
             Contact contact = (Contact)DataContext;
+            DataContext = contact;
+
             contact.Name = nameBox.Text;
             contact.Surname = surnameBox.Text;
             contact.Address = addressBox.Text;
@@ -45,19 +47,18 @@ namespace SebContactsApp
             {
                 conn.Insert(contact);
             }
-            Debug.WriteLine("SaveButton Clicked");
             Close();
         }
 
         private void Browse_Button_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Browse button clicked");
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
+
             Contact contact = (Contact)DataContext;
+
             contact.imgURL = openFileDialog.FileName;
             DataContext = contact;
-            //imageURLBox.Text = openFileDialog.FileName; // Why is this not accesible
         }
     }
 }

@@ -108,7 +108,14 @@ namespace SebContactsApp
                 //imgURLpath.Source = selectedItem.imgURL;
                 if (selectedItem.imgURL != null)
                 {
-                    imgURLpath.Source = new BitmapImage(new Uri(selectedItem.imgURL));
+                    try
+                    {
+                        imgURLpath.Source = new BitmapImage(new Uri(selectedItem.imgURL));
+                    }
+                    catch
+                    {
+                        imgURLpath.Source = null;
+                    }
                 }
             }
         }
@@ -133,7 +140,7 @@ namespace SebContactsApp
                     companyLabel.Content = "N/A";
                     postionLabel.Content = "N/A";
                     mobileLabel.Content = "N/A";
-                    //emailLabel.Content = "N/A";
+                    emailLabel.Content = "N/A";
                 }
             }
         }

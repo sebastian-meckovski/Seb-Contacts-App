@@ -66,7 +66,7 @@
                 <Label Content="N/A" Name="companyLabel"/>
                 <Label Content="N/A" Name="postionLabel"/>
                 <Label Content="N/A" Name="mobileLabel"/>
-                <Label Content="{Binding Email}" Name="emailLabel"/>
+                <Label Content="N/A" Name="emailLabel"/>
             </StackPanel>
         </DockPanel>
     </Grid>
