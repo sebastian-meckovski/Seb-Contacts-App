@@ -39,20 +39,26 @@
 
             <DockPanel>
                 <Label Content="Image: " Width="75"/>
-
-                <TextBox Margin="5" Text="URL">
+                <Grid>
+                    <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
+                    <TextBox x:Name="imageURLBox" Text="{Binding imgURL}" Grid.Column="0" Margin="5" Height=""></TextBox>
+                    <Button HorizontalAlignment="Right" Width="25" Grid.Column="1"
+                                        Margin="2" Content="..." Click="Browse_Button_Click">
+                    </Button>
+                </Grid>
+                <!--<TextBox Margin="5" Text="URL">
                     <TextBox.Template>
                         <ControlTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
-                                <TextBox Name="imageURLBox" Grid.Column="0"></TextBox>
+                                <TextBox x:Name="imageURLBox" Grid.Column="0"></TextBox>
                                 <Button HorizontalAlignment="Right" Width="20" Grid.Column="1"
                                         Margin="2" Content="..." Click="Browse_Button_Click">
                                 </Button>
                             </Grid>
                         </ControlTemplate>
                     </TextBox.Template>
-                </TextBox>
+                </TextBox>-->
 
             </DockPanel>
 

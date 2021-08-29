@@ -31,7 +31,7 @@ namespace SebContactsApp
             companyBox.Text = selectedContact.Company;
             positionBox.Text = selectedContact.position;
             mobileBox.Text = selectedContact.mobile;
-            emailBox.Text = selectedContact.email;
+            emailBox.Text = selectedContact.Email;
         }
 
         private void Edit_Button_Click(object sender, RoutedEventArgs e)
@@ -42,7 +42,7 @@ namespace SebContactsApp
             selectedContact.Company = companyBox.Text;
             selectedContact.position = positionBox.Text;
             selectedContact.mobile = mobileBox.Text;
-            selectedContact.email = emailBox.Text;
+            selectedContact.Email = emailBox.Text;
 
             using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
             {

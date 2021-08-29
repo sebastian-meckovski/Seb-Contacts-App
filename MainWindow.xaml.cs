@@ -90,7 +90,7 @@ namespace SebContactsApp
                 companyLabel.Content = selectedItem.Company;
                 postionLabel.Content = selectedItem.position;
                 mobileLabel.Content = selectedItem.mobile;
-                emailLabel.Content = selectedItem.email;
+                emailLabel.Content = selectedItem.Email;
                 //imgURLpath.Source = selectedItem.imgURL;
                 if (selectedItem.imgURL != null)
                 {

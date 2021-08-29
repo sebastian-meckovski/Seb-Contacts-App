@@ -24,18 +24,20 @@ namespace SebContactsApp
         public AddNewContactWindow()
         {
             InitializeComponent();
+            DataContext = new Contact();
         }
 
         private void Save_Button_Click(object sender, RoutedEventArgs e)
         {
-            Contact contact = new Contact();
+            Contact contact = (Contact)DataContext;
             contact.Name = nameBox.Text;
             contact.Surname = surnameBox.Text;
             contact.Address = addressBox.Text;
             contact.Company = companyBox.Text;
             contact.position = positionBox.Text;
             contact.mobile = mobileBox.Text;
-            contact.email = emailBox.Text;
+            //contact.email = emailBox.Text;
+
             //contact.imgURL = imageURLBox.Text
 
 
@@ -52,7 +54,10 @@ namespace SebContactsApp
             Debug.WriteLine("Browse button clicked");
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.ShowDialog();
-            // imageURLBox.Text = openFileDialog.FileName; // Why is this not accesible
+            Contact contact = (Contact)DataContext;
+            contact.imgURL = openFileDialog.FileName;
+            DataContext = contact;
+            //imageURLBox.Text = openFileDialog.FileName; // Why is this not accesible
         }
     }
 }
