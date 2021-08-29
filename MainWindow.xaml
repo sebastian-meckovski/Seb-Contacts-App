@@ -25,6 +25,7 @@
                   Grid.Column="1"
                   Background="#d9d2bd"
                   Margin="5 5 5 40"
+                  SelectedItem="{Binding SelectedContact}"
                   MouseDoubleClick="myListView_MouseDoubleClick"
                   SelectionChanged="myListView_SelectionChanged">
 
@@ -58,7 +59,7 @@
                 <Label Content="Email:"/>
             </StackPanel>
 
-            <StackPanel>
+            <StackPanel DataContext="{Binding SelectedContact}">
                 <Label Content="N/A" Name="nameLabel"/>
                 <Label Content="N/A" Name="surnameLabel"/>
                 <Label Content="N/A" Name="addressLabel"/>

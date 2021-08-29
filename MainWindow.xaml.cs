@@ -17,22 +17,36 @@ using Microsoft.Win32;
 using SebContactsApp.Classes;
 using SQLite;
 using System.IO;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace SebContactsApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         List<Contact> contacts;
+        private Contact selectedContact;
 
+        #region INotifyPropertyChanged Implementation
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            if (propertyName != null && PropertyChanged != null)
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        #endregion
+
+        public Contact SelectedContact { get => selectedContact; set { selectedContact = value; OnPropertyChanged(); } }
         public MainWindow()
         {
             Directory.CreateDirectory($"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\Contact data");  // why this function doesn't work in App.xaml.cs file?
             InitializeComponent();
             contacts = new List<Contact>();
             UpdateData();
+            DataContext = this;
         }
 
         private void UpdateData()
@@ -103,13 +117,13 @@ namespace SebContactsApp
         {
             try
             {
-                myListView.SelectedItem = myListView.Items[Index];
+                SelectedContact = (Contact)myListView.Items[Index];
             }
             catch (ArgumentOutOfRangeException)
             {
                 if (myListView.Items.Count > 0)
                 {
-                    myListView.SelectedItem = myListView.Items[myListView.Items.Count - 1];
+                    SelectedContact = (Contact)myListView.Items[myListView.Items.Count - 1];
                 }
                 else
                 {
@@ -119,7 +133,7 @@ namespace SebContactsApp
                     companyLabel.Content = "N/A";
                     postionLabel.Content = "N/A";
                     mobileLabel.Content = "N/A";
-                    emailLabel.Content = "N/A";
+                    //emailLabel.Content = "N/A";
                 }
             }
         }
@@ -134,10 +148,9 @@ namespace SebContactsApp
 
         private void deleteContact()
         {
-            Contact selectedContact = (Contact)myListView.SelectedItem;
-            using(SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
             {
-                conn.Delete(selectedContact);
+                conn.Delete(SelectedContact);
             }
         }
     }
