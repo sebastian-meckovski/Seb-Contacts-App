@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -22,8 +23,14 @@ namespace SebContactsApp
         public editContactWindow(Contact selectedContact)
         {
             InitializeComponent();
+            if (selectedContact == null)
+            {
+                selectedContact = new Contact();
+            }
 
-            this.selectedContact = selectedContact;
+            DataContext = selectedContact;  // what does it do again?
+
+            this.selectedContact = selectedContact;  // why do I need that
 
             nameBox.Text = selectedContact.Name;
             surnameBox.Text = selectedContact.Surname;
@@ -32,6 +39,7 @@ namespace SebContactsApp
             positionBox.Text = selectedContact.Position;
             mobileBox.Text = selectedContact.Mobile;
             emailBox.Text = selectedContact.Email;
+            //imageURLBox.Text = selectedContact.imgURL; // why is it blank when I edit it??
         }
 
         private void Edit_Button_Click(object sender, RoutedEventArgs e)
@@ -43,6 +51,8 @@ namespace SebContactsApp
             selectedContact.Position = positionBox.Text;
             selectedContact.Mobile = mobileBox.Text;
             selectedContact.Email = emailBox.Text;
+            // selectedContact.imgURL = imageURLBox.Text;
+
 
             using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
             {
@@ -58,6 +68,17 @@ namespace SebContactsApp
                 conn.Delete(selectedContact);
             }
             Close();
+        }
+
+        private void Browse_Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+
+            Contact contact = (Contact)DataContext;
+
+            contact.imgURL = openFileDialog.FileName;
+            DataContext = contact;
         }
     }
 }

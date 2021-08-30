@@ -29,8 +29,10 @@ namespace SebContactsApp
 
         private void Save_Button_Click(object sender, RoutedEventArgs e)
         {
+            // Control - elements
+
             Contact contact = (Contact)DataContext;
-            DataContext = contact;
+             // can you remind me what is that? Property available on any control that defines where control will get its data from when using bindings
 
             contact.Name = nameBox.Text;
             contact.Surname = surnameBox.Text;
@@ -40,7 +42,7 @@ namespace SebContactsApp
             contact.Mobile = mobileBox.Text;
             contact.Email = emailBox.Text;
 
-            //contact.imgURL = imageURLBox.Text
+            //contact.imgURL = imageURLBox.Text;
 
 
             using (SQLiteConnection conn = new SQLiteConnection(App.databasePath))
@@ -59,6 +61,7 @@ namespace SebContactsApp
 
             contact.imgURL = openFileDialog.FileName;
             DataContext = contact;
+            Debug.WriteLine(contact.imgURL);  // is it a good idea to set it at the time of browse?
         }
     }
 }

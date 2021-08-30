@@ -25,19 +25,20 @@ namespace SebContactsApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window, INotifyPropertyChanged  // what does it do? //it's an interface that 
     {
         List<Contact> contacts;
         private Contact selectedContact;
 
-        #region INotifyPropertyChanged Implementation
+        #region INotifyPropertyChanged Implementation          
+        //what's that? and why does this comment look different?
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             if (propertyName != null && PropertyChanged != null)
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        #endregion
+        #endregion  // and that again?
 
         public Contact SelectedContact { get => selectedContact; set { selectedContact = value; OnPropertyChanged(); } }
         public MainWindow()
@@ -46,7 +47,8 @@ namespace SebContactsApp
             InitializeComponent();
             contacts = new List<Contact>();
             UpdateData();
-            DataContext = this;
+            MakeSelection(0);
+            DataContext = this; // what is this again?
         }
 
         private void UpdateData()
@@ -61,9 +63,12 @@ namespace SebContactsApp
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
-            AddNewContactWindow addNewContactWindow = new AddNewContactWindow();
+            //AddNewContactWindow addNewContactWindow = new AddNewContactWindow();
 
-            addNewContactWindow.ShowDialog();
+            //addNewContactWindow.ShowDialog();
+            editContactWindow editContactWindow = new editContactWindow(null);
+            editContactWindow.ShowDialog();
+
 
             UpdateData();
             MakeSelection(myListView.Items.Count - 1);
@@ -105,7 +110,7 @@ namespace SebContactsApp
                 postionLabel.Content = selectedItem.Position;
                 mobileLabel.Content = selectedItem.Mobile;
                 emailLabel.Content = selectedItem.Email;
-                //imgURLpath.Source = selectedItem.imgURL;
+
                 if (selectedItem.imgURL != null)
                 {
                     try
@@ -114,8 +119,12 @@ namespace SebContactsApp
                     }
                     catch
                     {
-                        imgURLpath.Source = null;
+                        imgURLpath.Source = new BitmapImage(new Uri(@"Images\defaultPicture.png", UriKind.Relative)); // why does it not work with relative path?
                     }
+                }
+                else
+                {
+                    imgURLpath.Source = new BitmapImage(new Uri(@"Images\defaultPicture.png", UriKind.Relative)); // why does it not work with relative path?
                 }
             }
         }

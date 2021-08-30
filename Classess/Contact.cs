@@ -7,29 +7,74 @@ using SQLite;
 
 namespace SebContactsApp.Classes
 {
-    public class Contact : INotifyPropertyChanged
+    public class Contact : INotifyPropertyChanged  //what's that class?
     {
-        private string _imgURL;
-        private string _email;
+        private string _name;
+        private string _surname;
+        private string _address;
+        private string _company;
+        private string _position;
         private string _mobile;
+        private string _email;
+        private string _imgURL;
 
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
 
-        public string Name { get; set; }
+        public string Name 
+        {
+            get { return _name; }
+            set 
+            {
+                _name = value;
+                OnPropertyChanged();
+            } 
+        }
 
-        public string Surname { get; set; }
+        public string Surname
+        {
+            get {return _surname; }
+            set 
+            {
+                _surname = value;
+                OnPropertyChanged();
+            } 
+        }
 
-        public string Address { get; set; }
+        public string Address
+        {
+            get { return _address; }
+            set 
+            { 
+                _address = value;
+                OnPropertyChanged();
+            } 
+        }
 
-        public string Company { get; set; }
+        public string Company 
+        {
+            get { return _company; }
+            set 
+            { 
+                _position = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public string Position { get; set; }
+        public string Position 
+        { 
+            get { return _position;}
+            set 
+            { 
+                _position = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public string Mobile 
+        public string Mobile
         {
             get { return _mobile; }
-            set 
+            set
             {
                 _mobile = value;
                 OnPropertyChanged();
