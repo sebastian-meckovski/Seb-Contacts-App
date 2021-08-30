@@ -56,7 +56,7 @@ namespace SebContactsApp.Classes
             get { return _company; }
             set 
             { 
-                _position = value;
+                _company = value;
                 OnPropertyChanged();
             }
         }

@@ -32,25 +32,25 @@ namespace SebContactsApp
 
             this.selectedContact = selectedContact;  // why do I need that
 
-            nameBox.Text = selectedContact.Name;
+            //nameBox.Text = selectedContact.Name;
             surnameBox.Text = selectedContact.Surname;
             adressBox.Text = selectedContact.Address;
             companyBox.Text = selectedContact.Company;
             positionBox.Text = selectedContact.Position;
             mobileBox.Text = selectedContact.Mobile;
-            emailBox.Text = selectedContact.Email;
+            //emailBox.Text = selectedContact.Email;
             //imageURLBox.Text = selectedContact.imgURL; // why is it blank when I edit it??
         }
 
         private void Edit_Button_Click(object sender, RoutedEventArgs e)
         {
-            selectedContact.Name = nameBox.Text;
+            //selectedContact.Name = nameBox.Text;
             selectedContact.Surname = surnameBox.Text;
             selectedContact.Address = adressBox.Text;
             selectedContact.Company = companyBox.Text;
             selectedContact.Position = positionBox.Text;
             selectedContact.Mobile = mobileBox.Text;
-            selectedContact.Email = emailBox.Text;
+            //selectedContact.Email = emailBox.Text;
             // selectedContact.imgURL = imageURLBox.Text;
 
 
