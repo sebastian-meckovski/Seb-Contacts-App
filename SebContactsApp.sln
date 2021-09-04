@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebContactsApp", "SebContactsApp.csproj", "{431119BC-9B83-45AB-8390-22BC50F53935}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebContactsApp", "SebContactsApp.csproj", "{8B731D78-0C1D-465E-8940-E3E62DB2ADAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{431119BC-9B83-45AB-8390-22BC50F53935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{431119BC-9B83-45AB-8390-22BC50F53935}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{431119BC-9B83-45AB-8390-22BC50F53935}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{431119BC-9B83-45AB-8390-22BC50F53935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B731D78-0C1D-465E-8940-E3E62DB2ADAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B731D78-0C1D-465E-8940-E3E62DB2ADAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B731D78-0C1D-465E-8940-E3E62DB2ADAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B731D78-0C1D-465E-8940-E3E62DB2ADAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5CDCCEAE-642E-499A-B6A3-0CF608D683AD}
+		SolutionGuid = {C446D5C8-533B-4561-B9DC-81068A668D99}
 	EndGlobalSection
 EndGlobal
