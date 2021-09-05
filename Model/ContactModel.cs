@@ -28,5 +28,13 @@ namespace SebContactsApp.Model
 
         public string imgURL { get; set; }
 
+        public string FullName
+        {
+            get
+            {
+                return $"{Name} {Surname}";
+            }
+        }
+
     }
 }
