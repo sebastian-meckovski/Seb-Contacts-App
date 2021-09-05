@@ -1,0 +1,36 @@
+﻿using SebContactsApp.Model;
+using SQLite;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SebContactsApp
+{
+    public partial class addNew : Form
+    {
+        public addNew()
+        {
+            InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Contact seb = new Contact();
+            seb.Name = txtName.Text;
+            seb.Surname = txtSurname.Text;
+
+            using (SQLiteConnection conn = new SQLiteConnection(SebContactsApp.ContactsApp.databasePath))
+            {
+                conn.Insert(seb);
+            }
+
+            Close();
+        }
+    }
+}
