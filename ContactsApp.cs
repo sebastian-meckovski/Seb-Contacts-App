@@ -27,7 +27,6 @@ namespace SebContactsApp
         {
             InitializeComponent();
             Directory.CreateDirectory($"{specialFolder}");
-            UpdateData();
         }
 
         private void Form1_Load(object sender, EventArgs e)
