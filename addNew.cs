@@ -19,9 +19,15 @@ namespace SebContactsApp
         {
             InitializeComponent();
         }
+
+        private void addNew_Load(object sender, EventArgs e)
+        {
+            txtName.Text = contact.Name;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Contact seb = new Contact();
+            Contact seb = contact;
             seb.Name = txtName.Text;
             seb.Surname = txtSurname.Text;
 
@@ -33,9 +39,5 @@ namespace SebContactsApp
             Close();
         }
 
-        private void addNew_Load(object sender, EventArgs e)
-        {
-            txtName.Text = contact.Name;
-        }
     }
 }

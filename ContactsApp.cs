@@ -60,6 +60,8 @@ namespace SebContactsApp
             addNew addNew = new addNew();
             addNew.contact = contacts[listboxContacts.SelectedIndex];
             addNew.ShowDialog();
+
+            UpdateData();
             //MessageBox.Show("Edit Click!");
 
             // is it possible to edit existing contact by passing contact object to btn_AddNew_Click?
