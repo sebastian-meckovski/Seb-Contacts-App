@@ -47,7 +47,7 @@ namespace SebContactsApp
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             addNew addNew = new addNew();
-            addNew.contact = new Contact()
+            addNew.contact = new Contact();
 
             addNew.ShowDialog();
 
@@ -58,7 +58,6 @@ namespace SebContactsApp
         {
             addNew addNew = new addNew();
             addNew.contact = contacts[listboxContacts.SelectedIndex];
-
             addNew.ShowDialog();
 
             UpdateData();

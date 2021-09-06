@@ -29,14 +29,12 @@ namespace SebContactsApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //Contact activeContact = contact;
-
             contact.Name = txtName.Text;
             contact.Surname = txtSurname.Text;
 
             using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
             {
-                conn.Update(contact);
+                conn.Insert(contact);
             }
 
             Close();
