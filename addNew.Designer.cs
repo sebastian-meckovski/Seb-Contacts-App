@@ -36,36 +36,39 @@ namespace SebContactsApp
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(78, 66);
+            this.txtName.Location = new System.Drawing.Point(104, 81);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.Size = new System.Drawing.Size(132, 22);
             this.txtName.TabIndex = 0;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(78, 92);
+            this.txtSurname.Location = new System.Drawing.Point(104, 113);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtSurname.Size = new System.Drawing.Size(132, 22);
             this.txtSurname.TabIndex = 1;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(88, 191);
+            this.btnSave.Location = new System.Drawing.Point(117, 235);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // addNew
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 419);
+            this.ClientSize = new System.Drawing.Size(420, 516);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "addNew";
             this.Text = "addNew";
             this.Load += new System.EventHandler(this.addNew_Load);
@@ -78,6 +81,7 @@ namespace SebContactsApp
 
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
-        private System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnSave; // made public just to be able to update functionality before opening
+                                                    // that window
     }
 }

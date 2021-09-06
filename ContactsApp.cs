@@ -49,6 +49,9 @@ namespace SebContactsApp
             addNew addNew = new addNew();
             addNew.contact = new Contact();
 
+            addNew.btnSave.Click -= addNew.btnSave_Click_update; //changed functionality of the save button
+            addNew.btnSave.Click += addNew.btnSave_Click;
+
             addNew.ShowDialog();
 
             UpdateData();
@@ -58,6 +61,10 @@ namespace SebContactsApp
         {
             addNew addNew = new addNew();
             addNew.contact = contacts[listboxContacts.SelectedIndex];
+
+            addNew.btnSave.Click += addNew.btnSave_Click_update; //changed functionality of the save button
+            addNew.btnSave.Click -= addNew.btnSave_Click; 
+
             addNew.ShowDialog();
 
             UpdateData();
