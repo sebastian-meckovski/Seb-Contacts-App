@@ -48,6 +48,8 @@ namespace SebContactsApp
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             addNew addNew = new addNew();
+            addNew.contact = new Contact();
+            addNew.contact.Name = "Sebastian";
             addNew.ShowDialog();
 
             UpdateData();

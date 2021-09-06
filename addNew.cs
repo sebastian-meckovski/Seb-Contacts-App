@@ -14,11 +14,11 @@ namespace SebContactsApp
 {
     public partial class addNew : Form
     {
+        public Contact contact { get; set; }
         public addNew()
         {
             InitializeComponent();
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             Contact seb = new Contact();
@@ -31,6 +31,11 @@ namespace SebContactsApp
             }
 
             Close();
+        }
+
+        private void addNew_Load(object sender, EventArgs e)
+        {
+            txtName.Text = contact.Name;
         }
     }
 }
