@@ -56,6 +56,7 @@ namespace SebContactsApp
             // 
             // listboxContacts
             // 
+            this.listboxContacts.DisplayMember = "FullName";
             this.listboxContacts.FormattingEnabled = true;
             this.listboxContacts.Location = new System.Drawing.Point(12, 12);
             this.listboxContacts.Name = "listboxContacts";

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,17 +24,19 @@ namespace SebContactsApp
         private void addNew_Load(object sender, EventArgs e)
         {
             txtName.Text = contact.Name;
+            txtSurname.Text = contact.Surname;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Contact seb = contact;
-            seb.Name = txtName.Text;
-            seb.Surname = txtSurname.Text;
+            //Contact activeContact = contact;
 
-            using (SQLiteConnection conn = new SQLiteConnection(SebContactsApp.ContactsApp.databasePath))
+            contact.Name = txtName.Text;
+            contact.Surname = txtSurname.Text;
+
+            using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
             {
-                conn.Insert(seb);
+                conn.Update(contact);
             }
 
             Close();
