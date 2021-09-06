@@ -49,7 +49,7 @@ namespace SebContactsApp
         {
             addNew addNew = new addNew();
             addNew.contact = new Contact();
-            addNew.contact.Name = "Sebastian";
+            //addNew.contact.Name = "Sebastian";
             addNew.ShowDialog();
 
             UpdateData();
@@ -57,7 +57,10 @@ namespace SebContactsApp
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Edit Click!");
+            addNew addNew = new addNew();
+            addNew.contact = contacts[listboxContacts.SelectedIndex];
+            addNew.ShowDialog();
+            //MessageBox.Show("Edit Click!");
 
             // is it possible to edit existing contact by passing contact object to btn_AddNew_Click?
             // if it was WPF you could pass the contact as an argument to addNew function like this:
