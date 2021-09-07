@@ -27,31 +27,53 @@ namespace SebContactsApp
             txtSurname.Text = contact.Surname;
         }
 
-        public void btnSave_Click(object sender, EventArgs e)
+        //public void btnSave_Click(object sender, EventArgs e)
+        //{
+        //    contact.Name = txtName.Text;
+        //    contact.Surname = txtSurname.Text;
+
+        //    using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+        //    {
+        //        conn.Insert(contact);
+        //    }
+
+        //    Close();
+        //}
+
+        //public void btnSave_Click_update(object sender, EventArgs e)  // created this function which will update 
+        //{                                                             // selected contact instead of inserting a 
+        //    contact.Name = txtName.Text;                              // new one
+        //    contact.Surname = txtSurname.Text;
+
+        //    using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+        //    {
+        //        conn.Update(contact);
+        //    }
+
+        //    Close();
+        //}
+
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
+            if (contact == null)
+            {
+                //validations
+                return;
+            }
             contact.Name = txtName.Text;
             contact.Surname = txtSurname.Text;
-
             using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
             {
-                conn.Insert(contact);
+                if (contact.ID == 0)
+                {
+                    conn.Insert(contact);
+                }
+                else
+                {
+                    conn.Update(contact);
+                }
             }
-
             Close();
         }
-
-        public void btnSave_Click_update(object sender, EventArgs e)  // created this function which will update 
-        {                                                             // selected contact instead of inserting a 
-            contact.Name = txtName.Text;                              // new one
-            contact.Surname = txtSurname.Text;
-
-            using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
-            {
-                conn.Update(contact);
-            }
-
-            Close();
-        }
-
     }
 }
