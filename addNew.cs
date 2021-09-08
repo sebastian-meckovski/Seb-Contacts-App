@@ -25,6 +25,7 @@ namespace SebContactsApp
         {
             txtName.Text = contact.Name;
             txtSurname.Text = contact.Surname;
+            
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
@@ -48,6 +49,11 @@ namespace SebContactsApp
                 }
             }
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
