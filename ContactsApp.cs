@@ -63,5 +63,15 @@ namespace SebContactsApp
 
             UpdateData();
         }
+
+        private void selectionChanged(object sender, EventArgs e)
+        {
+            lblName.Text = ((Contact)listboxContacts.SelectedItem).Name;
+            lblAddress.Text = ((Contact)listboxContacts.SelectedItem).Address;
+            lblCompany.Text = ((Contact)listboxContacts.SelectedItem).Company;
+            lblPosition.Text = ((Contact)listboxContacts.SelectedItem).Position;
+            lblPhone.Text = ((Contact)listboxContacts.SelectedItem).Phone;
+            lblEmail.Text = ((Contact)listboxContacts.SelectedItem).Email;
+        }
     }
 }

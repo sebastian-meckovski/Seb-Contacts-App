@@ -25,7 +25,10 @@ namespace SebContactsApp
         {
             txtName.Text = contact.Name;
             txtSurname.Text = contact.Surname;
-            
+            txtCompany.Text = contact.Company;
+            txtPosition.Text = contact.Position;
+            txtPhone.Text = contact.Phone;
+            txtEmail.Text = contact.Email;
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
@@ -33,10 +36,17 @@ namespace SebContactsApp
             if (contact == null)
             {
                 //validations
+                // still not sure why I need that
                 return;
             }
             contact.Name = txtName.Text;
             contact.Surname = txtSurname.Text;
+            contact.Address = txtAddress.Text;
+            contact.Company = txtCompany.Text;
+            contact.Position = txtPosition.Text;
+            contact.Phone = txtPhone.Text;
+            contact.Email = txtEmail.Text;
+
             using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
             {
                 if (contact.ID == 0)

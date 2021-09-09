@@ -74,6 +74,7 @@ namespace SebContactsApp
             this.listboxContacts.Name = "listboxContacts";
             this.listboxContacts.Size = new System.Drawing.Size(237, 316);
             this.listboxContacts.TabIndex = 4;
+            this.listboxContacts.SelectedIndexChanged += new System.EventHandler(this.selectionChanged);
             // 
             // btnAddNew
             // 
