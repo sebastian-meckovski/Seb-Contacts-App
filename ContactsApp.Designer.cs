@@ -65,6 +65,7 @@ namespace SebContactsApp
             this.button3.TabIndex = 3;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.deleteClick);
             // 
             // listboxContacts
             // 
@@ -198,7 +199,7 @@ namespace SebContactsApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 380);
+            this.ClientSize = new System.Drawing.Size(558, 380);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblPosition);

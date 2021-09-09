@@ -25,6 +25,7 @@ namespace SebContactsApp
         {
             txtName.Text = contact.Name;
             txtSurname.Text = contact.Surname;
+            txtSurname.Text = contact.Surname;
             txtCompany.Text = contact.Company;
             txtPosition.Text = contact.Position;
             txtPhone.Text = contact.Phone;
