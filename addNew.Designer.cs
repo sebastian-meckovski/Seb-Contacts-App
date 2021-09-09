@@ -178,12 +178,13 @@ namespace SebContactsApp
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // addNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(272, 270);
+            this.ClientSize = new System.Drawing.Size(306, 270);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtPhone);

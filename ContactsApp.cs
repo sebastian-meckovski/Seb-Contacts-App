@@ -59,10 +59,12 @@ namespace SebContactsApp
         private void btnEdit_Click(object sender, EventArgs e)
         {
             int myIndex = listboxContacts.SelectedIndex;
-            addNew addNew = new addNew();
-            addNew.contact = contacts[myIndex];
-
-            addNew.ShowDialog();
+            if (listboxContacts.Items.Count > 0)
+            {
+                addNew addNew = new addNew();
+                addNew.contact = contacts[myIndex];
+                addNew.ShowDialog();
+            }
 
             UpdateData();
             makeSelection(myIndex);
@@ -81,21 +83,28 @@ namespace SebContactsApp
 
         private void makeSelection(int index)
         {
-            try
+            if (listboxContacts.Items.Count > 1 && index > 0)
             {
-                listboxContacts.SelectedIndex = index;
-            } catch (Exception)
-            {
-
+                try 
+                {
+                    listboxContacts.SelectedIndex = index;
+                }
+                catch
+                {
+                
+                }
             }
         }
 
         private void deleteClick(object sender, EventArgs e)
         {
             int myIndex = listboxContacts.SelectedIndex;
-            using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+            if (listboxContacts.Items.Count > 0)
             {
-                conn.Delete(listboxContacts.SelectedItem);
+                using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+                {
+                    conn.Delete(listboxContacts.SelectedItem);
+                }
             }
             UpdateData();
             makeSelection(myIndex);
