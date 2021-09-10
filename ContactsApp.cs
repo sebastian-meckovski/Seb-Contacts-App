@@ -33,6 +33,7 @@ namespace SebContactsApp
         {
             UpdateData();
             makeSelection(listboxContacts.Items.Count - 1);
+            image.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void UpdateData()
@@ -72,12 +73,20 @@ namespace SebContactsApp
 
         private void selectionChanged(object sender, EventArgs e)
         {
-            lblName.Text = ((Contact)listboxContacts.SelectedItem).Name;
+            lblName.Text = ((Contact)listboxContacts.SelectedItem).FullName;
             lblAddress.Text = ((Contact)listboxContacts.SelectedItem).Address;
             lblCompany.Text = ((Contact)listboxContacts.SelectedItem).Company;
             lblPosition.Text = ((Contact)listboxContacts.SelectedItem).Position;
             lblPhone.Text = ((Contact)listboxContacts.SelectedItem).Phone;
             lblEmail.Text = ((Contact)listboxContacts.SelectedItem).Email;
+
+            try
+            {
+                image.Load(((Contact)listboxContacts.SelectedItem).imgURL);
+            } catch (Exception)
+            {
+                image.Load(@"C:\Users\sebas\Source\Repos\sebastian-meckovski\SebContactsApp\Resources\DefaultImage.jpg");
+            }
         }
 
 

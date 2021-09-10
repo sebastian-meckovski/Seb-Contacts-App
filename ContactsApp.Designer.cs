@@ -29,6 +29,7 @@ namespace SebContactsApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnEdit = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.listboxContacts = new System.Windows.Forms.ListBox();
@@ -45,6 +46,9 @@ namespace SebContactsApp
             this.lblCompany = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.image = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEdit
@@ -76,6 +80,7 @@ namespace SebContactsApp
             this.listboxContacts.Size = new System.Drawing.Size(237, 316);
             this.listboxContacts.TabIndex = 4;
             this.listboxContacts.SelectedIndexChanged += new System.EventHandler(this.selectionChanged);
+            this.listboxContacts.DoubleClick += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAddNew
             // 
@@ -195,11 +200,31 @@ namespace SebContactsApp
             this.lblName.TabIndex = 13;
             this.lblName.Text = "N/A";
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // image
+            // 
+            this.image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.image.Image = global::SebContactsApp.Properties.Resources.DefaultImage;
+            this.image.ImageLocation = "";
+            this.image.InitialImage = null;
+            this.image.Location = new System.Drawing.Point(281, 12);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(242, 199);
+            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.image.TabIndex = 19;
+            this.image.TabStop = false;
+            // 
             // ContactsApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 380);
+            this.Controls.Add(this.image);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblPosition);
@@ -219,6 +244,7 @@ namespace SebContactsApp
             this.Name = "ContactsApp";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,6 +267,8 @@ namespace SebContactsApp
         private System.Windows.Forms.Label lblCompany;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox image;
     }
 }
 

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,11 +26,12 @@ namespace SebContactsApp
         {
             txtName.Text = contact.Name;
             txtSurname.Text = contact.Surname;
-            txtSurname.Text = contact.Surname;
+            txtAddress.Text = contact.Address;
             txtCompany.Text = contact.Company;
             txtPosition.Text = contact.Position;
             txtPhone.Text = contact.Phone;
             txtEmail.Text = contact.Email;
+            txtURL.Text = contact.imgURL;
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace SebContactsApp
             contact.Position = txtPosition.Text;
             contact.Phone = txtPhone.Text;
             contact.Email = txtEmail.Text;
+            contact.imgURL = txtURL.Text;
 
             using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
             {
@@ -62,14 +65,21 @@ namespace SebContactsApp
             Close();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    txtURL.Text = ofd.FileName;
+                }
+            }
         }
     }
 }

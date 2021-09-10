@@ -45,20 +45,23 @@ namespace SebContactsApp
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtURL = new System.Windows.Forms.TextBox();
+            this.Label8 = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(90, 23);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(170, 20);
+            this.txtName.Size = new System.Drawing.Size(221, 20);
             this.txtName.TabIndex = 0;
             // 
             // txtSurname
             // 
             this.txtSurname.Location = new System.Drawing.Point(90, 49);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(170, 20);
+            this.txtSurname.Size = new System.Drawing.Size(221, 20);
             this.txtSurname.TabIndex = 1;
             // 
             // btnSave
@@ -115,7 +118,6 @@ namespace SebContactsApp
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Address:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -139,35 +141,35 @@ namespace SebContactsApp
             // 
             this.txtCompany.Location = new System.Drawing.Point(90, 101);
             this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(170, 20);
+            this.txtCompany.Size = new System.Drawing.Size(221, 20);
             this.txtCompany.TabIndex = 4;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(90, 75);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(170, 20);
+            this.txtAddress.Size = new System.Drawing.Size(221, 20);
             this.txtAddress.TabIndex = 3;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(90, 179);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(170, 20);
+            this.txtEmail.Size = new System.Drawing.Size(221, 20);
             this.txtEmail.TabIndex = 7;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(90, 153);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(170, 20);
+            this.txtPhone.Size = new System.Drawing.Size(221, 20);
             this.txtPhone.TabIndex = 6;
             // 
             // txtPosition
             // 
             this.txtPosition.Location = new System.Drawing.Point(90, 127);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(170, 20);
+            this.txtPosition.Size = new System.Drawing.Size(221, 20);
             this.txtPosition.TabIndex = 5;
             // 
             // btnCancel
@@ -180,11 +182,43 @@ namespace SebContactsApp
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtURL
+            // 
+            this.txtURL.Location = new System.Drawing.Point(90, 205);
+            this.txtURL.Name = "txtURL";
+            this.txtURL.Size = new System.Drawing.Size(221, 20);
+            this.txtURL.TabIndex = 20;
+            // 
+            // Label8
+            // 
+            this.Label8.AutoSize = true;
+            this.Label8.Location = new System.Drawing.Point(12, 208);
+            this.Label8.Name = "Label8";
+            this.Label8.Size = new System.Drawing.Size(64, 13);
+            this.Label8.TabIndex = 21;
+            this.Label8.Text = "Image URL:";
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.FlatAppearance.BorderSize = 2;
+            this.btnBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Location = new System.Drawing.Point(273, 208);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(36, 15);
+            this.btnBrowse.TabIndex = 22;
+            this.btnBrowse.Text = "...";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
             // addNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 270);
+            this.ClientSize = new System.Drawing.Size(346, 270);
+            this.Controls.Add(this.btnBrowse);
+            this.Controls.Add(this.txtURL);
+            this.Controls.Add(this.Label8);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtPhone);
@@ -227,6 +261,9 @@ namespace SebContactsApp
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtURL;
+        private System.Windows.Forms.Label Label8;
+        private System.Windows.Forms.Button btnBrowse;
         // that window
     }
 }
