@@ -118,5 +118,25 @@ namespace SebContactsApp
             UpdateData();
             makeSelection(myIndex);
         }
+
+        private void enableDBExport(object sender, EventArgs e)
+        {
+            if(checkBoxExport.CheckState == CheckState.Checked)
+            {
+                checkBoxExport.CheckState = CheckState.Unchecked;
+                setDBconnSettings.Enabled = false;
+            }
+            else
+            {
+                checkBoxExport.CheckState = CheckState.Checked;
+                setDBconnSettings.Enabled = true;
+            }
+        }
+
+        private void setDBconnSettings_Click(object sender, EventArgs e)
+        {
+            ConnectionStringWindow connectionStringWindow = new ConnectionStringWindow();
+            connectionStringWindow.ShowDialog();
+        }
     }
 }

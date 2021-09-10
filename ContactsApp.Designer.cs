@@ -47,7 +47,12 @@ namespace SebContactsApp
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBoxExport = new System.Windows.Forms.ToolStripMenuItem();
+            this.setDBconnSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.image = new System.Windows.Forms.PictureBox();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,9 +80,9 @@ namespace SebContactsApp
             // 
             this.listboxContacts.DisplayMember = "FullName";
             this.listboxContacts.FormattingEnabled = true;
-            this.listboxContacts.Location = new System.Drawing.Point(12, 12);
+            this.listboxContacts.Location = new System.Drawing.Point(12, 27);
             this.listboxContacts.Name = "listboxContacts";
-            this.listboxContacts.Size = new System.Drawing.Size(237, 316);
+            this.listboxContacts.Size = new System.Drawing.Size(237, 303);
             this.listboxContacts.TabIndex = 4;
             this.listboxContacts.SelectedIndexChanged += new System.EventHandler(this.selectionChanged);
             this.listboxContacts.DoubleClick += new System.EventHandler(this.btnEdit_Click);
@@ -95,7 +100,7 @@ namespace SebContactsApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(278, 234);
+            this.label1.Location = new System.Drawing.Point(267, 240);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 6;
@@ -104,7 +109,7 @@ namespace SebContactsApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(278, 257);
+            this.label2.Location = new System.Drawing.Point(267, 263);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 7;
@@ -113,7 +118,7 @@ namespace SebContactsApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(278, 280);
+            this.label3.Location = new System.Drawing.Point(267, 286);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 8;
@@ -122,7 +127,7 @@ namespace SebContactsApp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(278, 303);
+            this.label4.Location = new System.Drawing.Point(267, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 9;
@@ -131,7 +136,7 @@ namespace SebContactsApp
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(278, 326);
+            this.label5.Location = new System.Drawing.Point(267, 332);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 10;
@@ -140,7 +145,7 @@ namespace SebContactsApp
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(278, 349);
+            this.label6.Location = new System.Drawing.Point(267, 355);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 11;
@@ -149,7 +154,7 @@ namespace SebContactsApp
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(386, 349);
+            this.lblEmail.Location = new System.Drawing.Point(375, 355);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(27, 13);
             this.lblEmail.TabIndex = 18;
@@ -158,7 +163,7 @@ namespace SebContactsApp
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(386, 326);
+            this.lblPhone.Location = new System.Drawing.Point(375, 332);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(27, 13);
             this.lblPhone.TabIndex = 17;
@@ -167,7 +172,7 @@ namespace SebContactsApp
             // lblPosition
             // 
             this.lblPosition.AutoSize = true;
-            this.lblPosition.Location = new System.Drawing.Point(386, 303);
+            this.lblPosition.Location = new System.Drawing.Point(375, 309);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(27, 13);
             this.lblPosition.TabIndex = 16;
@@ -176,7 +181,7 @@ namespace SebContactsApp
             // lblCompany
             // 
             this.lblCompany.AutoSize = true;
-            this.lblCompany.Location = new System.Drawing.Point(386, 280);
+            this.lblCompany.Location = new System.Drawing.Point(375, 286);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(27, 13);
             this.lblCompany.TabIndex = 15;
@@ -185,7 +190,7 @@ namespace SebContactsApp
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(386, 257);
+            this.lblAddress.Location = new System.Drawing.Point(375, 263);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(27, 13);
             this.lblAddress.TabIndex = 14;
@@ -194,7 +199,7 @@ namespace SebContactsApp
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(386, 234);
+            this.lblName.Location = new System.Drawing.Point(375, 240);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(27, 13);
             this.lblName.TabIndex = 13;
@@ -206,24 +211,56 @@ namespace SebContactsApp
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(556, 24);
+            this.menuStrip1.TabIndex = 20;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkBoxExport,
+            this.setDBconnSettings});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // checkBoxExport
+            // 
+            this.checkBoxExport.Name = "checkBoxExport";
+            this.checkBoxExport.Size = new System.Drawing.Size(206, 22);
+            this.checkBoxExport.Text = "Enable Contact Export";
+            this.checkBoxExport.Click += new System.EventHandler(this.enableDBExport);
+            // 
+            // setDBconnSettings
+            // 
+            this.setDBconnSettings.Name = "setDBconnSettings";
+            this.setDBconnSettings.Size = new System.Drawing.Size(206, 22);
+            this.setDBconnSettings.Text = "Set Database Connection";
+            this.setDBconnSettings.Click += new System.EventHandler(this.setDBconnSettings_Click);
+            // 
             // image
             // 
             this.image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.image.Image = global::SebContactsApp.Properties.Resources.DefaultImage;
             this.image.ImageLocation = "";
             this.image.InitialImage = null;
-            this.image.Location = new System.Drawing.Point(281, 12);
+            this.image.Location = new System.Drawing.Point(270, 27);
             this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(242, 199);
+            this.image.Size = new System.Drawing.Size(274, 199);
             this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.image.TabIndex = 19;
             this.image.TabStop = false;
             // 
             // ContactsApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 380);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(556, 380);
             this.Controls.Add(this.image);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPhone);
@@ -241,9 +278,13 @@ namespace SebContactsApp
             this.Controls.Add(this.listboxContacts);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "ContactsApp";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -269,6 +310,10 @@ namespace SebContactsApp
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox image;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkBoxExport;
+        private System.Windows.Forms.ToolStripMenuItem setDBconnSettings;
     }
 }
 

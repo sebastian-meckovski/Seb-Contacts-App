@@ -81,6 +81,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Windows\ConnectionStringWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ConnectionStringWindow.Designer.cs">
+      <DependentUpon>ConnectionStringWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\addNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Model\ContactModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Windows\ConnectionStringWindow.resx">
+      <DependentUpon>ConnectionStringWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\addNew.resx">
       <DependentUpon>addNew.cs</DependentUpon>
     </EmbeddedResource>
