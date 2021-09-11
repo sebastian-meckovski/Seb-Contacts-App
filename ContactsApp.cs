@@ -62,6 +62,17 @@ namespace SebContactsApp
             addNew.ShowDialog();
 
             UpdateData();
+
+            //this way you can access any images from resources
+            //Properties.Resources.icon
+
+            //How to add into resources
+            //Copy designation file into resource folder
+            //Go SebContactsApp > Properties > Resources.resx Double click
+            //Drag and drop the resource folder image that want to add
+            //Save
+
+            //Now it should be available atProperties.Resources.______ Name of your file
         }
     }
 }
