@@ -85,7 +85,7 @@ namespace SebContactsApp
                 image.Load(((Contact)listboxContacts.SelectedItem).imgURL);
             } catch (Exception)
             {
-                image.Load(@"C:\Users\sebas\Source\Repos\sebastian-meckovski\SebContactsApp\Resources\DefaultImage.jpg");
+                image.Image = Properties.Resources.DefaultImage;
             }
         }
 
@@ -137,17 +137,6 @@ namespace SebContactsApp
         {
             ConnectionStringWindow connectionStringWindow = new ConnectionStringWindow();
             connectionStringWindow.ShowDialog();
-
-            //this way you can access any images from resources
-            //Properties.Resources.icon
-
-            //How to add into resources
-            //Copy designation file into resource folder
-            //Go SebContactsApp > Properties > Resources.resx Double click
-            //Drag and drop the resource folder image that want to add
-            //Save
-
-            //Now it should be available atProperties.Resources.______ Name of your file
         }
     }
 }
