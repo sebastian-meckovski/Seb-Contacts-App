@@ -33,7 +33,6 @@ namespace SebContactsApp
         {
             UpdateData();
             makeSelection(listboxContacts.Items.Count - 1);
-            image.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void UpdateData()
