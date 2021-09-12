@@ -81,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\dbCredentialsModel.cs" />
     <Compile Include="Windows\ConnectionStringWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +139,7 @@
   <ItemGroup>
     <None Include="Resources\configuration+settings+icon-1320191040059302570.png" />
     <Content Include="Resources\DefaultImage.jpg" />
+    <None Include="Resources\export.png" />
     <Content Include="Resources\icon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

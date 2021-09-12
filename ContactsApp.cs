@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -21,7 +22,11 @@ namespace SebContactsApp
         static string databaseName = "Contacts.db";
         public static string databasePath = Path.Combine(specialFolder, databaseName);
 
+        OleDbConnection conn;
+        OleDbCommand contactCommand;
+
         public List<Contact> contacts;
+        public List<dbCredentials> dbCredentials;
 
         public ContactsApp()
         {
@@ -40,7 +45,11 @@ namespace SebContactsApp
             using (SQLiteConnection conn = new SQLiteConnection(databasePath))
             {
                 conn.CreateTable<Contact>();
+                conn.CreateTable<dbCredentials>();
+
                 contacts = conn.Table<Contact>().ToList();
+                dbCredentials = conn.Table<dbCredentials>().ToList();
+
                 listboxContacts.DataSource = contacts;
             }
         }
@@ -136,6 +145,27 @@ namespace SebContactsApp
         {
             ConnectionStringWindow connectionStringWindow = new ConnectionStringWindow();
             connectionStringWindow.ShowDialog();
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            var connString = @"Provider=MSOLEDBSQL;DataTypeCompatibility=80;Server=DESKTOP-JK4JML1\SEBSQLSERVER;Database=SebTestData2021;UID=sa;PWD=0rderW153!;";
+            conn = new OleDbConnection(connString);
+            try
+            {
+                conn.Open();
+                contactCommand = new OleDbCommand("INSERT INTO SebTestData2021.dbo.customer_contact(cc_name, cc_position, cc_customer_id)" +
+                                                  "VALUES('Jason SQLSON', 'CLEANER', 2)", conn);
+
+                contactCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Success!");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

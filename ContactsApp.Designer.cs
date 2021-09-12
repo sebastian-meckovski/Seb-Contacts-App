@@ -47,20 +47,20 @@ namespace SebContactsApp
             this.lblName = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxExport = new System.Windows.Forms.ToolStripMenuItem();
             this.setDBconnSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.image = new System.Windows.Forms.PictureBox();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +98,7 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listboxContacts.DisplayMember = "FullName";
             this.listboxContacts.FormattingEnabled = true;
+            this.listboxContacts.ItemHeight = 16;
             this.listboxContacts.Location = new System.Drawing.Point(3, 3);
             this.listboxContacts.Name = "listboxContacts";
             this.tableLayoutPanel1.SetRowSpan(this.listboxContacts, 2);
@@ -190,7 +191,7 @@ namespace SebContactsApp
             this.lblEmail.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
             this.lblEmail.Location = new System.Drawing.Point(99, 200);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(39, 20);
+            this.lblEmail.Size = new System.Drawing.Size(50, 25);
             this.lblEmail.TabIndex = 18;
             this.lblEmail.Text = "N/A";
             // 
@@ -200,7 +201,7 @@ namespace SebContactsApp
             this.lblPhone.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
             this.lblPhone.Location = new System.Drawing.Point(99, 160);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(39, 20);
+            this.lblPhone.Size = new System.Drawing.Size(50, 25);
             this.lblPhone.TabIndex = 17;
             this.lblPhone.Text = "N/A";
             // 
@@ -210,7 +211,7 @@ namespace SebContactsApp
             this.lblPosition.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
             this.lblPosition.Location = new System.Drawing.Point(99, 120);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(39, 20);
+            this.lblPosition.Size = new System.Drawing.Size(50, 25);
             this.lblPosition.TabIndex = 16;
             this.lblPosition.Text = "N/A";
             // 
@@ -220,7 +221,7 @@ namespace SebContactsApp
             this.lblCompany.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
             this.lblCompany.Location = new System.Drawing.Point(99, 80);
             this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(39, 20);
+            this.lblCompany.Size = new System.Drawing.Size(50, 25);
             this.lblCompany.TabIndex = 15;
             this.lblCompany.Text = "N/A";
             // 
@@ -230,7 +231,7 @@ namespace SebContactsApp
             this.lblAddress.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
             this.lblAddress.Location = new System.Drawing.Point(99, 40);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(39, 20);
+            this.lblAddress.Size = new System.Drawing.Size(50, 25);
             this.lblAddress.TabIndex = 14;
             this.lblAddress.Text = "N/A";
             // 
@@ -242,7 +243,7 @@ namespace SebContactsApp
             this.lblName.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
             this.lblName.Location = new System.Drawing.Point(99, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(425, 20);
+            this.lblName.Size = new System.Drawing.Size(425, 25);
             this.lblName.TabIndex = 13;
             this.lblName.Text = "N/A";
             // 
@@ -272,6 +273,23 @@ namespace SebContactsApp
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1066, 469);
             this.tableLayoutPanel1.TabIndex = 21;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel4.Controls.Add(this.image, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnSettings, 1, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(536, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(527, 211);
+            this.tableLayoutPanel4.TabIndex = 22;
             // 
             // tableLayoutPanel2
             // 
@@ -331,26 +349,9 @@ namespace SebContactsApp
             this.label1.Font = new System.Drawing.Font("Keep Calm Med", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(69, 40);
             this.label1.TabIndex = 19;
             this.label1.Text = "Full Name";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel4.Controls.Add(this.image, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnSettings, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(536, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(527, 211);
-            this.tableLayoutPanel4.TabIndex = 22;
             // 
             // settingsToolStripMenuItem
             // 
@@ -365,37 +366,27 @@ namespace SebContactsApp
             // checkBoxExport
             // 
             this.checkBoxExport.Name = "checkBoxExport";
-            this.checkBoxExport.Size = new System.Drawing.Size(206, 22);
+            this.checkBoxExport.Size = new System.Drawing.Size(259, 26);
             this.checkBoxExport.Text = "Enable Contact Export";
             this.checkBoxExport.Click += new System.EventHandler(this.enableDBExport);
             // 
             // setDBconnSettings
             // 
             this.setDBconnSettings.Name = "setDBconnSettings";
-            this.setDBconnSettings.Size = new System.Drawing.Size(206, 22);
+            this.setDBconnSettings.Size = new System.Drawing.Size(259, 26);
             this.setDBconnSettings.Text = "Set Database Connection";
             this.setDBconnSettings.Click += new System.EventHandler(this.setDBconnSettings_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1066, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1066, 30);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.AllowDrop = true;
-            this.btnSettings.BackgroundImage = global::SebContactsApp.Properties.Resources.configuration_settings_icon_1320191040059302570;
-            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSettings.Location = new System.Drawing.Point(498, 3);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(25, 25);
-            this.btnSettings.TabIndex = 20;
-            this.btnSettings.UseVisualStyleBackColor = true;
             // 
             // image
             // 
@@ -412,6 +403,18 @@ namespace SebContactsApp
             this.image.TabIndex = 19;
             this.image.TabStop = false;
             // 
+            // btnSettings
+            // 
+            this.btnSettings.AllowDrop = true;
+            this.btnSettings.BackgroundImage = global::SebContactsApp.Properties.Resources.export;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSettings.Location = new System.Drawing.Point(498, 3);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(25, 25);
+            this.btnSettings.TabIndex = 20;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // ContactsApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -423,10 +426,10 @@ namespace SebContactsApp
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
