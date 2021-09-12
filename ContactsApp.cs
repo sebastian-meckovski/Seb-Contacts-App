@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -12,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SebContactsApp
 {
@@ -22,8 +22,8 @@ namespace SebContactsApp
         static string databaseName = "Contacts.db";
         public static string databasePath = Path.Combine(specialFolder, databaseName);
 
-        OleDbConnection conn;
-        OleDbCommand contactCommand;
+        SqlConnection connection;
+        SqlCommand contactCommand;
 
         public List<Contact> contacts;
         public List<dbCredentials> dbCredentialsList;
@@ -160,19 +160,20 @@ namespace SebContactsApp
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            var connString = $@"Provider=MSOLEDBSQL;DataTypeCompatibility=80;Server={dbCredentialsList[0].serverName};Database={dbCredentialsList[0].dbName};UID={dbCredentialsList[0].serverLogin};PWD={dbCredentialsList[0].serverPass};";
-            conn = new OleDbConnection(connString);
+            var connString = $@"Server={dbCredentialsList[0].serverName};Database={dbCredentialsList[0].dbName};User Id={dbCredentialsList[0].serverLogin};Password={dbCredentialsList[0].serverPass};";
+            //var connString = $"Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;";
+            connection = new SqlConnection(connString);
             try
             {
-                conn.Open();
-                contactCommand = new OleDbCommand("INSERT INTO SebTestData2021.dbo.customer_contact(cc_name, cc_position, cc_customer_id)" +
+                connection.Open();
+                contactCommand = new SqlCommand("INSERT INTO SebTestData2021.dbo.customer_contact(cc_name, cc_position, cc_customer_id)" +
                                                   $"VALUES('{((Contact)listboxContacts.SelectedItem).FullName}'," +
-                                                         $"'{((Contact)listboxContacts.SelectedItem).Position}', 2)", conn);
+                                                         $"'{((Contact)listboxContacts.SelectedItem).Position}', 2)", connection);
 
                 contactCommand.ExecuteNonQuery();
 
                 MessageBox.Show("Success!");
-                conn.Close();
+                connection.Close();
             }
             catch (Exception ex)
             {
