@@ -26,7 +26,7 @@ namespace SebContactsApp
         OleDbCommand contactCommand;
 
         public List<Contact> contacts;
-        public List<dbCredentials> dbCredentials;
+        public List<dbCredentials> dbCredentialsList;
 
         public ContactsApp()
         {
@@ -48,7 +48,7 @@ namespace SebContactsApp
                 conn.CreateTable<dbCredentials>();
 
                 contacts = conn.Table<Contact>().ToList();
-                dbCredentials = conn.Table<dbCredentials>().ToList();
+                dbCredentialsList = conn.Table<dbCredentials>().ToList();
 
                 listboxContacts.DataSource = contacts;
             }
@@ -144,7 +144,18 @@ namespace SebContactsApp
         private void setDBconnSettings_Click(object sender, EventArgs e)
         {
             ConnectionStringWindow connectionStringWindow = new ConnectionStringWindow();
+            if (dbCredentialsList.Count == 0)
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+                {
+                    dbCredentials dbCredentials = new dbCredentials();
+                    conn.Insert(dbCredentials);
+                    dbCredentialsList = conn.Table<dbCredentials>().ToList();
+                }
+            }
+            connectionStringWindow.dbCredentials = dbCredentialsList[0];
             connectionStringWindow.ShowDialog();
+            UpdateData();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)

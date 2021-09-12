@@ -13,10 +13,13 @@ namespace SebContactsApp.Model
         public int ID { get; set; }
 
         public string serverName { get; set; }
+
+        public string dbName { get; set; }
+
+        public string serverLogin { get; set; }
         
         public string serverPass { get; set; }
 
-        public string catName { get; set; }
 
     }
 }

@@ -30,13 +30,14 @@ namespace SebContactsApp
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtServerName = new System.Windows.Forms.TextBox();
+            this.txtDbName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtServerLogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtServerPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCredSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,21 +50,21 @@ namespace SebContactsApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Server Name:";
             // 
-            // textBox1
+            // txtServerName
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtServerName.Location = new System.Drawing.Point(142, 25);
+            this.txtServerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtServerName.Name = "txtServerName";
+            this.txtServerName.Size = new System.Drawing.Size(196, 22);
+            this.txtServerName.TabIndex = 1;
             // 
-            // textBox2
+            // txtDbName
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 60);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 22);
-            this.textBox2.TabIndex = 3;
+            this.txtDbName.Location = new System.Drawing.Point(142, 60);
+            this.txtDbName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDbName.Name = "txtDbName";
+            this.txtDbName.Size = new System.Drawing.Size(196, 22);
+            this.txtDbName.TabIndex = 3;
             // 
             // label2
             // 
@@ -75,13 +76,13 @@ namespace SebContactsApp
             this.label2.TabIndex = 2;
             this.label2.Text = "Database Name: ";
             // 
-            // textBox3
+            // txtServerLogin
             // 
-            this.textBox3.Location = new System.Drawing.Point(142, 95);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 22);
-            this.textBox3.TabIndex = 5;
+            this.txtServerLogin.Location = new System.Drawing.Point(142, 95);
+            this.txtServerLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtServerLogin.Name = "txtServerLogin";
+            this.txtServerLogin.Size = new System.Drawing.Size(196, 22);
+            this.txtServerLogin.TabIndex = 5;
             // 
             // label3
             // 
@@ -93,13 +94,13 @@ namespace SebContactsApp
             this.label3.TabIndex = 4;
             this.label3.Text = "Server Login:";
             // 
-            // textBox4
+            // txtServerPass
             // 
-            this.textBox4.Location = new System.Drawing.Point(142, 130);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 22);
-            this.textBox4.TabIndex = 7;
+            this.txtServerPass.Location = new System.Drawing.Point(142, 130);
+            this.txtServerPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtServerPass.Name = "txtServerPass";
+            this.txtServerPass.Size = new System.Drawing.Size(196, 22);
+            this.txtServerPass.TabIndex = 7;
             // 
             // label4
             // 
@@ -111,22 +112,34 @@ namespace SebContactsApp
             this.label4.TabIndex = 6;
             this.label4.Text = "Server Password:";
             // 
+            // btnCredSave
+            // 
+            this.btnCredSave.Location = new System.Drawing.Point(132, 171);
+            this.btnCredSave.Name = "btnCredSave";
+            this.btnCredSave.Size = new System.Drawing.Size(75, 23);
+            this.btnCredSave.TabIndex = 8;
+            this.btnCredSave.Text = "Save";
+            this.btnCredSave.UseVisualStyleBackColor = true;
+            this.btnCredSave.Click += new System.EventHandler(this.btnCredSave_Click);
+            // 
             // ConnectionStringWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 179);
-            this.Controls.Add(this.textBox4);
+            this.ClientSize = new System.Drawing.Size(357, 206);
+            this.Controls.Add(this.btnCredSave);
+            this.Controls.Add(this.txtServerPass);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtServerLogin);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDbName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtServerName);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConnectionStringWindow";
             this.Text = "ConnectionStringWindow";
+            this.Load += new System.EventHandler(this.ConnectionStringWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,12 +148,13 @@ namespace SebContactsApp
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtServerName;
+        private System.Windows.Forms.TextBox txtDbName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtServerLogin;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtServerPass;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCredSave;
     }
 }
