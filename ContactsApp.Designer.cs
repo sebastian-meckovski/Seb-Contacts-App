@@ -48,6 +48,8 @@ namespace SebContactsApp
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.image = new System.Windows.Forms.PictureBox();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,14 +57,12 @@ namespace SebContactsApp
             this.checkBoxExport = new System.Windows.Forms.ToolStripMenuItem();
             this.setDBconnSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.image = new System.Windows.Forms.PictureBox();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEdit
@@ -291,6 +291,33 @@ namespace SebContactsApp
             this.tableLayoutPanel4.Size = new System.Drawing.Size(527, 211);
             this.tableLayoutPanel4.TabIndex = 22;
             // 
+            // image
+            // 
+            this.image.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.image.Image = global::SebContactsApp.Properties.Resources.DefaultImage;
+            this.image.ImageLocation = "";
+            this.image.InitialImage = null;
+            this.image.Location = new System.Drawing.Point(3, 3);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(489, 205);
+            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.image.TabIndex = 19;
+            this.image.TabStop = false;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.AllowDrop = true;
+            this.btnSettings.BackgroundImage = global::SebContactsApp.Properties.Resources.export;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSettings.Location = new System.Drawing.Point(498, 3);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(25, 25);
+            this.btnSettings.TabIndex = 20;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -384,36 +411,9 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1066, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1066, 28);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // image
-            // 
-            this.image.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.image.Image = global::SebContactsApp.Properties.Resources.DefaultImage;
-            this.image.ImageLocation = "";
-            this.image.InitialImage = null;
-            this.image.Location = new System.Drawing.Point(3, 3);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(489, 205);
-            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.image.TabIndex = 19;
-            this.image.TabStop = false;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.AllowDrop = true;
-            this.btnSettings.BackgroundImage = global::SebContactsApp.Properties.Resources.export;
-            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSettings.Location = new System.Drawing.Point(498, 3);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(25, 25);
-            this.btnSettings.TabIndex = 20;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // ContactsApp
             // 
@@ -427,12 +427,12 @@ namespace SebContactsApp
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

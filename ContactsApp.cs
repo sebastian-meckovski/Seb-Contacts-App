@@ -160,13 +160,14 @@ namespace SebContactsApp
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            var connString = @"Provider=MSOLEDBSQL;DataTypeCompatibility=80;Server=DESKTOP-JK4JML1\SEBSQLSERVER;Database=SebTestData2021;UID=sa;PWD=0rderW153!;";
+            var connString = $@"Provider=MSOLEDBSQL;DataTypeCompatibility=80;Server={dbCredentialsList[0].serverName};Database={dbCredentialsList[0].dbName};UID={dbCredentialsList[0].serverLogin};PWD={dbCredentialsList[0].serverPass};";
             conn = new OleDbConnection(connString);
             try
             {
                 conn.Open();
                 contactCommand = new OleDbCommand("INSERT INTO SebTestData2021.dbo.customer_contact(cc_name, cc_position, cc_customer_id)" +
-                                                  "VALUES('Jason SQLSON', 'CLEANER', 2)", conn);
+                                                  $"VALUES('{((Contact)listboxContacts.SelectedItem).FullName}'," +
+                                                         $"'{((Contact)listboxContacts.SelectedItem).Position}', 2)", conn);
 
                 contactCommand.ExecuteNonQuery();
 
