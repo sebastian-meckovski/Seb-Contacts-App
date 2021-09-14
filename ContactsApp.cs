@@ -12,11 +12,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MetroSet_UI.Forms;
 
 namespace SebContactsApp
 {
 
-    public partial class ContactsApp : Form
+    public partial class ContactsApp : MetroSetForm
     {
         static string specialFolder = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\Contact Data";
         static string databaseName = "Contacts.db";
