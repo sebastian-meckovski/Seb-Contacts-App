@@ -37,26 +37,26 @@ namespace SebContactsApp
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblCompany = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblCompany = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.listboxContacts = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAddNew = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddNew = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.image = new System.Windows.Forms.PictureBox();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -168,107 +168,27 @@ namespace SebContactsApp
             this.tableLayoutPanel3.Size = new System.Drawing.Size(342, 314);
             this.tableLayoutPanel3.TabIndex = 22;
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Keep Calm Med", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Full Name";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.label6.Location = new System.Drawing.Point(3, 260);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 54);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Email:";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblName.Location = new System.Drawing.Point(99, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(240, 18);
+            this.lblName.TabIndex = 13;
+            this.lblName.Text = "N/A";
             // 
-            // lblAddress
+            // lblEmail
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.lblAddress.Location = new System.Drawing.Point(99, 52);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(39, 20);
-            this.lblAddress.TabIndex = 14;
-            this.lblAddress.Text = "N/A";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.label5.Location = new System.Drawing.Point(3, 208);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 52);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Phone:";
-            // 
-            // lblCompany
-            // 
-            this.lblCompany.AutoSize = true;
-            this.lblCompany.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.lblCompany.Location = new System.Drawing.Point(99, 104);
-            this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(39, 20);
-            this.lblCompany.TabIndex = 15;
-            this.lblCompany.Text = "N/A";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.label4.Location = new System.Drawing.Point(3, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 52);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Position:";
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.lblPosition.Location = new System.Drawing.Point(99, 156);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(39, 20);
-            this.lblPosition.TabIndex = 16;
-            this.lblPosition.Text = "N/A";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.label3.Location = new System.Drawing.Point(3, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 52);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Company:";
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.lblPhone.Location = new System.Drawing.Point(99, 208);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(39, 20);
-            this.lblPhone.TabIndex = 17;
-            this.lblPhone.Text = "N/A";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblEmail.Location = new System.Drawing.Point(99, 260);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 18);
+            this.lblEmail.TabIndex = 18;
+            this.lblEmail.Text = "N/A";
             // 
             // label2
             // 
@@ -276,34 +196,114 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Keep Calm Med", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 52);
             this.label2.TabIndex = 7;
             this.label2.Text = "Address:";
             // 
-            // lblEmail
+            // lblPhone
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.lblEmail.Location = new System.Drawing.Point(99, 260);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(39, 20);
-            this.lblEmail.TabIndex = 18;
-            this.lblEmail.Text = "N/A";
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblPhone.Location = new System.Drawing.Point(99, 208);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(32, 18);
+            this.lblPhone.TabIndex = 17;
+            this.lblPhone.Text = "N/A";
             // 
-            // lblName
+            // label3
             // 
-            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Keep Calm Med", 11.25F);
-            this.lblName.Location = new System.Drawing.Point(99, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(240, 20);
-            this.lblName.TabIndex = 13;
-            this.lblName.Text = "N/A";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.Location = new System.Drawing.Point(3, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 52);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Company:";
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblPosition.Location = new System.Drawing.Point(99, 156);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(32, 18);
+            this.lblPosition.TabIndex = 16;
+            this.lblPosition.Text = "N/A";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label4.Location = new System.Drawing.Point(3, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 52);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Position:";
+            // 
+            // lblCompany
+            // 
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblCompany.Location = new System.Drawing.Point(99, 104);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(32, 18);
+            this.lblCompany.TabIndex = 15;
+            this.lblCompany.Text = "N/A";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label5.Location = new System.Drawing.Point(3, 208);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 52);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Phone:";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblAddress.Location = new System.Drawing.Point(99, 52);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(32, 18);
+            this.lblAddress.TabIndex = 14;
+            this.lblAddress.Text = "N/A";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label6.Location = new System.Drawing.Point(3, 260);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 54);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Email:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 18);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Full Name";
             // 
             // listboxContacts
             // 
@@ -340,18 +340,18 @@ namespace SebContactsApp
             this.tableLayoutPanel2.Size = new System.Drawing.Size(342, 58);
             this.tableLayoutPanel2.TabIndex = 22;
             // 
-            // btnAddNew
+            // btnEdit
             // 
-            this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddNew.Location = new System.Drawing.Point(3, 3);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(108, 52);
-            this.btnAddNew.TabIndex = 5;
-            this.btnAddNew.Text = "Add";
-            this.btnAddNew.UseVisualStyleBackColor = true;
-            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            this.btnEdit.Location = new System.Drawing.Point(117, 3);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(108, 52);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // button3
             // 
@@ -366,18 +366,18 @@ namespace SebContactsApp
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.deleteClick);
             // 
-            // btnEdit
+            // btnAddNew
             // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(117, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(108, 52);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnAddNew.Location = new System.Drawing.Point(3, 3);
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(108, 52);
+            this.btnAddNew.TabIndex = 5;
+            this.btnAddNew.Text = "Add";
+            this.btnAddNew.UseVisualStyleBackColor = true;
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -396,18 +396,6 @@ namespace SebContactsApp
             this.tableLayoutPanel4.Size = new System.Drawing.Size(342, 250);
             this.tableLayoutPanel4.TabIndex = 22;
             // 
-            // btnSettings
-            // 
-            this.btnSettings.AllowDrop = true;
-            this.btnSettings.BackgroundImage = global::SebContactsApp.Properties.Resources.export;
-            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSettings.Location = new System.Drawing.Point(313, 3);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(26, 25);
-            this.btnSettings.TabIndex = 20;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
             // image
             // 
             this.image.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -422,6 +410,18 @@ namespace SebContactsApp
             this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.image.TabIndex = 19;
             this.image.TabStop = false;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.AllowDrop = true;
+            this.btnSettings.BackgroundImage = global::SebContactsApp.Properties.Resources.export;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSettings.Location = new System.Drawing.Point(313, 3);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(26, 25);
+            this.btnSettings.TabIndex = 20;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -456,6 +456,8 @@ namespace SebContactsApp
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ContactsApp";
+            this.SmallLineColor1 = System.Drawing.Color.SteelBlue;
+            this.SmallLineColor2 = System.Drawing.Color.SteelBlue;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
