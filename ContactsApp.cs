@@ -25,6 +25,7 @@ namespace SebContactsApp
 
         SqlConnection connection;
         SqlCommand contactCommand;
+        SqlCommand addressCommand;
 
         public List<Contact> contacts;
         public List<dbCredentials> dbCredentialsList;
@@ -168,10 +169,16 @@ namespace SebContactsApp
             {
                 connection.Open();
                 contactCommand = new SqlCommand("INSERT INTO SebTestData2021.dbo.customer_contact(cc_name, cc_position, cc_customer_id)" +
-                                                  $"VALUES('{((Contact)listboxContacts.SelectedItem).FullName}'," +
-                                                         $"'{((Contact)listboxContacts.SelectedItem).Position}', 2)", connection);
+                                               $"VALUES('{((Contact)listboxContacts.SelectedItem).FullName}'," +
+                                                      $"'{((Contact)listboxContacts.SelectedItem).Position}', 2)" +
+                                                      $"SELECT CAST(scope_identity() AS int)", connection);
 
-                contactCommand.ExecuteNonQuery();
+                int newId = (int)contactCommand.ExecuteScalar();
+                MessageBox.Show($"The ID insterted is {newId}");
+
+                //addressCommand = new SqlCommand("INSERT INTO ");
+
+                //addressCommand.ExecuteNonQuery();
 
                 MessageBox.Show("Success!");
                 connection.Close();
