@@ -168,7 +168,7 @@ namespace SebContactsApp
             try
             {
                 connection.Open();
-                contactCommand = new SqlCommand("INSERT INTO SebTestData2021.dbo.customer_contact(cc_name, cc_position, cc_customer_id)" +
+                contactCommand = new SqlCommand("INSERT INTO customer_contact(cc_name, cc_position, cc_customer_id)" +
                                                $"VALUES('{((Contact)listboxContacts.SelectedItem).FullName}'," +
                                                       $"'{((Contact)listboxContacts.SelectedItem).Position}', 2)" +
                                                       $"SELECT CAST(scope_identity() AS int)", connection);
@@ -176,9 +176,11 @@ namespace SebContactsApp
                 int newId = (int)contactCommand.ExecuteScalar();
                 MessageBox.Show($"The ID insterted is {newId}");
 
-                //addressCommand = new SqlCommand("INSERT INTO ");
+                addressCommand = new SqlCommand("INSERT INTO customer_contact_address(ccad_cc_id, ccad_address1)" +
+                                                $"VALUES({newId}," +
+                                                        $"'{((Contact)listboxContacts.SelectedItem).Address}')", connection);
 
-                //addressCommand.ExecuteNonQuery();
+                addressCommand.ExecuteNonQuery();
 
                 MessageBox.Show("Success!");
                 connection.Close();
