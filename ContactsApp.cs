@@ -168,11 +168,13 @@ namespace SebContactsApp
             try
             {
                 connection.Open();
-                contactCommand = new SqlCommand("INSERT INTO customer_contact(cc_name ,cc_first_name, cc_last_name, cc_position, cc_customer_id)" +
+                contactCommand = new SqlCommand("INSERT INTO customer_contact(cc_name ,cc_first_name, cc_last_name, cc_position, cc_telephone, cc_email, cc_customer_id)" +
                                                $"VALUES('{((Contact)listboxContacts.SelectedItem).FullName}'," +
                                                       $"'{((Contact)listboxContacts.SelectedItem).Name}'," +
                                                       $"'{((Contact)listboxContacts.SelectedItem).Surname}'," +
-                                                      $"'{((Contact)listboxContacts.SelectedItem).Position}', 2)" +
+                                                      $"'{((Contact)listboxContacts.SelectedItem).Position}'," +
+                                                      $"'{((Contact)listboxContacts.SelectedItem).Phone}'," +
+                                                      $"'{((Contact)listboxContacts.SelectedItem).Email}', 2)" +
                                                       $"SELECT CAST(scope_identity() AS int)", connection);
 
                 int newId = (int)contactCommand.ExecuteScalar();

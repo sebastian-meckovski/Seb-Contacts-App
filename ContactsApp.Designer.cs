@@ -78,8 +78,9 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkBoxExport,
             this.setDBconnSettings});
+            this.settingsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(80, 25);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // checkBoxExport
@@ -105,7 +106,7 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(130, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(270, 30);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
