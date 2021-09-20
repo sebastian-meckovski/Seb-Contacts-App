@@ -13,6 +13,7 @@ namespace SebContactsApp
     public partial class selectCompanyWindow : Form
     {
         List<string> myList;
+        public string companyListCommnand;
 
         public selectCompanyWindow()
         {
@@ -21,6 +22,8 @@ namespace SebContactsApp
 
         private void selectContactWindow_Load(object sender, EventArgs e)
         {
+            companyListCommnand = "SELECT cd_id, cd_statement_name FROM customer_detail";
+
             myList = new List<String>()
             {
                 "One",
