@@ -177,7 +177,8 @@ namespace SebContactsApp
                                                       $"'{((Contact)listboxContacts.SelectedItem).Surname}'," +
                                                       $"'{((Contact)listboxContacts.SelectedItem).Position}'," +
                                                       $"'{((Contact)listboxContacts.SelectedItem).Phone}'," +
-                                                      $"'{((Contact)listboxContacts.SelectedItem).Email}', 2)" +
+                                                      $"'{((Contact)listboxContacts.SelectedItem).Email}'," +
+                                                      $" {selectCompanyWindow.selectedId})" +
                                                       $"SELECT CAST(scope_identity() AS int)", connection);
 
                 int newId = (int)contactCommand.ExecuteScalar();

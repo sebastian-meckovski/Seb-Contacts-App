@@ -30,6 +30,7 @@ namespace SebContactsApp
         private void InitializeComponent()
         {
             this.companyListDropdown = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.exportButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // companyListDropdown
@@ -61,11 +62,22 @@ namespace SebContactsApp
             this.companyListDropdown.ThemeAuthor = "Narwin";
             this.companyListDropdown.ThemeName = "MetroLite";
             // 
+            // exportButton
+            // 
+            this.exportButton.Location = new System.Drawing.Point(155, 172);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(75, 23);
+            this.exportButton.TabIndex = 1;
+            this.exportButton.Text = "Export";
+            this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
+            // 
             // selectCompanyWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 233);
+            this.Controls.Add(this.exportButton);
             this.Controls.Add(this.companyListDropdown);
             this.Name = "selectCompanyWindow";
             this.Text = "Select Company";
@@ -77,5 +89,6 @@ namespace SebContactsApp
         #endregion
 
         private MetroSet_UI.Controls.MetroSetComboBox companyListDropdown;
+        private System.Windows.Forms.Button exportButton;
     }
 }

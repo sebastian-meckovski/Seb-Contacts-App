@@ -8,8 +8,8 @@ namespace SebContactsApp.Model
 {
     class CompanyClass
     {
-        public int ID { get; set; }
+        public int cd_id { get; set; }
 
-        public string CompanyName { get; set; }
+        public string cd_statement_name { get; set; }
     }
 }
