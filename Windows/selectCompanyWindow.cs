@@ -10,16 +10,25 @@ using System.Windows.Forms;
 
 namespace SebContactsApp
 {
-    public partial class selectContactWindow : Form
+    public partial class selectCompanyWindow : Form
     {
-        public selectContactWindow()
+        List<string> myList;
+
+        public selectCompanyWindow()
         {
             InitializeComponent();
         }
 
         private void selectContactWindow_Load(object sender, EventArgs e)
         {
-            
+            myList = new List<String>()
+            {
+                "One",
+                "Two",
+                "Three",
+            };
+
+            companyListDropdown.DataSource = myList;
         }
     }
 }

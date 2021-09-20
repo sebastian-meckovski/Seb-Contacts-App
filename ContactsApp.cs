@@ -167,6 +167,9 @@ namespace SebContactsApp
             connection = new SqlConnection(connString);
             try
             {
+                selectCompanyWindow selectCompanyWindow = new selectCompanyWindow();
+                selectCompanyWindow.ShowDialog();
+
                 connection.Open();
                 contactCommand = new SqlCommand("INSERT INTO customer_contact(cc_name ,cc_first_name, cc_last_name, cc_position, cc_telephone, cc_email, cc_customer_id)" +
                                                $"VALUES('{((Contact)listboxContacts.SelectedItem).FullName}'," +

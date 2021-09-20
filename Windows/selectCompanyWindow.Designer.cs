@@ -1,7 +1,7 @@
 ﻿
 namespace SebContactsApp
 {
-    partial class selectContactWindow
+    partial class selectCompanyWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -60,14 +60,14 @@ namespace SebContactsApp
             this.companyListDropdown.ThemeAuthor = "Narwin";
             this.companyListDropdown.ThemeName = "MetroLite";
             // 
-            // selectContactWindow
+            // selectCompanyWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 233);
             this.Controls.Add(this.companyListDropdown);
-            this.Name = "selectContactWindow";
-            this.Text = "selectContactWindow";
+            this.Name = "selectCompanyWindow";
+            this.Text = "Select Company";
             this.Load += new System.EventHandler(this.selectContactWindow_Load);
             this.ResumeLayout(false);
 
