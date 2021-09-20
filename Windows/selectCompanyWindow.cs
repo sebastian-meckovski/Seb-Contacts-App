@@ -22,16 +22,14 @@ namespace SebContactsApp
 
         private void selectContactWindow_Load(object sender, EventArgs e)
         {
-            companyListCommnand = "SELECT cd_id, cd_statement_name FROM customer_detail";
-
-            myList = new List<String>()
+            SebTestData2021Entities db = new SebTestData2021Entities();
+            var customers = db.customer_detail.Select(y => new
             {
-                "One",
-                "Two",
-                "Three",
-            };
+                cd_id = y.cd_id,
+                cd_statement_name = y.cd_statement_name
+            }).ToList();
 
-            companyListDropdown.DataSource = myList;
+            companyListDropdown.DataSource = customers;
         }
     }
 }

@@ -43,6 +43,7 @@ namespace SebContactsApp
             this.companyListDropdown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.companyListDropdown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.companyListDropdown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.companyListDropdown.DisplayMember = "cd_statement_name";
             this.companyListDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.companyListDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.companyListDropdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
