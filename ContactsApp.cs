@@ -170,6 +170,12 @@ namespace SebContactsApp
                 selectCompanyWindow selectCompanyWindow = new selectCompanyWindow();
                 selectCompanyWindow.ShowDialog();
 
+                if (selectCompanyWindow.selectedId == 0)
+                {
+                    return;
+                }
+
+
                 connection.Open();
                 contactCommand = new SqlCommand("INSERT INTO customer_contact(cc_name ,cc_first_name, cc_last_name, cc_position, cc_telephone, cc_email, cc_customer_id)" +
                                                $"VALUES('{((Contact)listboxContacts.SelectedItem).FullName}'," +
