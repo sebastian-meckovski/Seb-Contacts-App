@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\CompanyClass.cs" />
     <Compile Include="Model\dbCredentialsModel.cs" />
     <Compile Include="Windows\selectCompanyWindow.cs">
       <SubType>Form</SubType>
