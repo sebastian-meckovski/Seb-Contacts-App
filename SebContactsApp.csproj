@@ -86,6 +86,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\dbCredentialsModel.cs" />
+    <Compile Include="selectContactWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selectContactWindow.Designer.cs">
+      <DependentUpon>selectContactWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ConnectionStringWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="Model\ContactModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="selectContactWindow.resx">
+      <DependentUpon>selectContactWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\ConnectionStringWindow.resx">
       <DependentUpon>ConnectionStringWindow.cs</DependentUpon>
     </EmbeddedResource>
