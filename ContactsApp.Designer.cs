@@ -58,12 +58,14 @@ namespace SebContactsApp
             this.image = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.windowIcon = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.windowIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -78,9 +80,9 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkBoxExport,
             this.setDBconnSettings});
-            this.settingsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(80, 25);
+            this.settingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(70, 25);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // checkBoxExport
@@ -104,9 +106,9 @@ namespace SebContactsApp
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(30, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(118, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(230, 30);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -446,12 +448,25 @@ namespace SebContactsApp
             this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 576);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
+            // windowIcon
+            // 
+            this.windowIcon.BackColor = System.Drawing.Color.Transparent;
+            this.windowIcon.Image = global::SebContactsApp.Properties.Resources.contacts_app_icon_24;
+            this.windowIcon.Location = new System.Drawing.Point(2, 0);
+            this.windowIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.windowIcon.Name = "windowIcon";
+            this.windowIcon.Size = new System.Drawing.Size(28, 28);
+            this.windowIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.windowIcon.TabIndex = 23;
+            this.windowIcon.TabStop = false;
+            // 
             // ContactsApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(929, 607);
+            this.Controls.Add(this.windowIcon);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
@@ -468,6 +483,7 @@ namespace SebContactsApp
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.windowIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,6 +518,7 @@ namespace SebContactsApp
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.ListBox listboxContacts;
+        private System.Windows.Forms.PictureBox windowIcon;
     }
 }
 

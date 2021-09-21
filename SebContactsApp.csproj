@@ -197,6 +197,7 @@
       <DependentUpon>companyEntity.edmx</DependentUpon>
       <LastGenOutput>companyEntity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\contacts-app-icon-24.png" />
     <Content Include="Resources\DefaultImage.jpg" />
     <None Include="Resources\export.png" />
     <Content Include="Resources\icon.jpg" />
