@@ -56,16 +56,16 @@ namespace SebContactsApp
             this.button3 = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.windowIcon = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.image = new System.Windows.Forms.PictureBox();
+            this.windowIcon = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.windowIcon)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windowIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -116,7 +116,7 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(30, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(80, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(78, 29);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -322,12 +322,13 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listboxContacts.DisplayMember = "FullName";
+            this.listboxContacts.Font = new System.Drawing.Font("Keep Calm Med", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listboxContacts.FormattingEnabled = true;
-            this.listboxContacts.ItemHeight = 26;
+            this.listboxContacts.ItemHeight = 44;
             this.listboxContacts.Location = new System.Drawing.Point(3, 3);
             this.listboxContacts.Name = "listboxContacts";
             this.tableLayoutPanel1.SetRowSpan(this.listboxContacts, 2);
-            this.listboxContacts.Size = new System.Drawing.Size(456, 498);
+            this.listboxContacts.Size = new System.Drawing.Size(456, 488);
             this.listboxContacts.TabIndex = 4;
             this.listboxContacts.SelectedIndexChanged += new System.EventHandler(this.selectionChanged);
             this.listboxContacts.DoubleClick += new System.EventHandler(this.btnEdit_Click);
@@ -413,18 +414,6 @@ namespace SebContactsApp
             this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 576);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
-            // windowIcon
-            // 
-            this.windowIcon.BackColor = System.Drawing.Color.Transparent;
-            this.windowIcon.Image = global::SebContactsApp.Properties.Resources.contacts_app_icon_24;
-            this.windowIcon.Location = new System.Drawing.Point(2, 0);
-            this.windowIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.windowIcon.Name = "windowIcon";
-            this.windowIcon.Size = new System.Drawing.Size(28, 28);
-            this.windowIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.windowIcon.TabIndex = 23;
-            this.windowIcon.TabStop = false;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -456,6 +445,18 @@ namespace SebContactsApp
             this.image.TabIndex = 19;
             this.image.TabStop = false;
             // 
+            // windowIcon
+            // 
+            this.windowIcon.BackColor = System.Drawing.Color.Transparent;
+            this.windowIcon.Image = global::SebContactsApp.Properties.Resources.contacts_app_icon_24;
+            this.windowIcon.Location = new System.Drawing.Point(2, 0);
+            this.windowIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.windowIcon.Name = "windowIcon";
+            this.windowIcon.Size = new System.Drawing.Size(28, 28);
+            this.windowIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.windowIcon.TabIndex = 23;
+            this.windowIcon.TabStop = false;
+            // 
             // ContactsApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -477,9 +478,9 @@ namespace SebContactsApp
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.windowIcon)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windowIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
