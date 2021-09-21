@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SebContactsApp
+namespace SebContactsApp.Entities
 {
     using System;
     using System.Data.Entity;

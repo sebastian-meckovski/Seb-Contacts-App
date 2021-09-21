@@ -1,4 +1,5 @@
-﻿using SebContactsApp.Model;
+﻿using SebContactsApp.Entities;
+using SebContactsApp.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

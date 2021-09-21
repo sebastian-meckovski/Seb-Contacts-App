@@ -160,7 +160,7 @@ namespace SebContactsApp
             UpdateData();
         }
 
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void ExportSelected_Click(object sender, EventArgs e)
         {
             var connString = $@"Server={dbCredentialsList[0].serverName};Database={dbCredentialsList[0].dbName};User Id={dbCredentialsList[0].serverLogin};Password={dbCredentialsList[0].serverPass};";
             //var connString = $"Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;";
