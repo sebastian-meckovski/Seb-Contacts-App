@@ -166,7 +166,8 @@ namespace SebContactsApp
             var connString = $@"Server={DatabaseCredentials.dbCredentials[0].serverName};
                                 Database={DatabaseCredentials.dbCredentials[0].dbName};
                                 User Id={DatabaseCredentials.dbCredentials[0].serverLogin};
-                                Password={DatabaseCredentials.dbCredentials[0].serverPass};";
+                                Password={DatabaseCredentials.dbCredentials[0].serverPass};"; // maybe we can store it somewhere else?
+
 
             connection = new SqlConnection(connString);
 
