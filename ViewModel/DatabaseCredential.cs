@@ -1,0 +1,14 @@
+﻿using SebContactsApp.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SebContactsApp.ViewModel
+{
+    public static class DatabaseCredentials
+    {
+        public static List<dbCredentials> dbCredentials { get; set; }
+    }
+}

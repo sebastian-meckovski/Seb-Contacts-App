@@ -11,20 +11,42 @@ namespace SebContactsApp.Entities
 {
     using System;
     using System.Data.Entity;
+    using System.Data.Entity.Core.EntityClient;
     using System.Data.Entity.Infrastructure;
-    
+    using System.Data.SqlClient;
+
     public partial class SebTestData2021Entities : DbContext
     {
-        public SebTestData2021Entities()
-            : base("name=SebTestData2021Entities")
+        public SebTestData2021Entities(string connectionString)
+            : base(connectionString)
         {
         }
-    
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+
+        public static SebTestData2021Entities ConnectToSqlServer(string host, string catalog, string user, string pass, bool winAuth)
         {
-            throw new UnintentionalCodeFirstException();
+            SqlConnectionStringBuilder sqlBuilder = new SqlConnectionStringBuilder
+            {
+                DataSource = host,
+                InitialCatalog = catalog,
+                PersistSecurityInfo = true,
+                IntegratedSecurity = winAuth,
+                MultipleActiveResultSets = true,
+
+                UserID = user,
+                Password = pass,
+            };
+
+            // assumes a connectionString name in .config of MyDbEntities
+            var entityConnectionStringBuilder = new EntityConnectionStringBuilder
+            {
+                Provider = "System.Data.SqlClient",
+                ProviderConnectionString = sqlBuilder.ConnectionString,
+                Metadata = "res://*/DbModel.csdl|res://*/DbModel.ssdl|res://*/DbModel.msl",
+            };
+
+            return new SebTestData2021Entities(entityConnectionStringBuilder.ConnectionString);
         }
-    
+
         public virtual DbSet<customer_detail> customer_detail { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using SebContactsApp.Entities;
 using SebContactsApp.Model;
+using SebContactsApp.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,10 @@ namespace SebContactsApp
 
         private void selectContactWindow_Load(object sender, EventArgs e)
         {
-            SebTestData2021Entities db = new SebTestData2021Entities();
+            var dbCredentials = DatabaseCredentials.dbCredentials[0];
+            var db = SebTestData2021Entities.ConnectToSqlServer(dbCredentials.serverName, dbCredentials.dbName, dbCredentials.serverLogin, dbCredentials.serverPass, false);
+
+            
             var customers = db.customer_detail.Select(y => new CompanyClass()
             {
                 cd_id = y.cd_id,

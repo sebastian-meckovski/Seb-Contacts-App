@@ -115,6 +115,7 @@
     </Compile>
     <Compile Include="Model\CompanyClass.cs" />
     <Compile Include="Model\dbCredentialsModel.cs" />
+    <Compile Include="ViewModel\DatabaseCredential.cs" />
     <Compile Include="Windows\selectCompanyWindow.cs">
       <SubType>Form</SubType>
     </Compile>
