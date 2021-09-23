@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SebContactsApp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace SebContactsApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ContactsApp());
+
         }
+ 
     }
 }

@@ -170,13 +170,14 @@ namespace SebContactsApp
 
 
             connection = new SqlConnection(connString);
-
             try
             {
+                var selectedId = 0;
+
                 selectCompanyWindow selectCompanyWindow = new selectCompanyWindow();
                 selectCompanyWindow.ShowDialog();
 
-                if (selectCompanyWindow.selectedId == 0)
+                if (selectCompanyWindow.selectedId == null)
                 {
                     return;
                 }

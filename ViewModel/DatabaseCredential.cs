@@ -10,5 +10,7 @@ namespace SebContactsApp.ViewModel
     public static class DatabaseCredentials
     {
         public static List<dbCredentials> dbCredentials { get; set; }
+
     }
+
 }
