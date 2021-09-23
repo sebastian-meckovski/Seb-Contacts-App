@@ -18,7 +18,7 @@ namespace SebContactsApp
 {
     public partial class selectCompanyWindow : Form
     {
-        public static object selectedId;
+        public static object selectedId; // not sure if it's the right approach
 
         public selectCompanyWindow()
         {
@@ -54,7 +54,7 @@ namespace SebContactsApp
         {
             selectedId = ((DataRowView)companyListDropdown.SelectedItem).Row[0];
 
-            MessageBox.Show($"{selectedId.GetType()}");
+            MessageBox.Show($"{selectedId}");
 
             Close();
         }
