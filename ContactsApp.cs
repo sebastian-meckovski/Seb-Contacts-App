@@ -132,18 +132,24 @@ namespace SebContactsApp
 
         private void enableDBExport_click(object sender, EventArgs e)
         {
-            if(checkBoxExport.CheckState == CheckState.Checked)
+            dbCredentials dbCredentialsInst = new dbCredentials();
+            if (checkBoxExport.CheckState == (CheckState)1)
             {
-                checkBoxExport.CheckState = CheckState.Unchecked;
+                dbCredentialsInst.enableExport = 0;
+                checkBoxExport.CheckState = (CheckState)dbCredentialsInst.enableExport;
                 setDBconnSettings.Enabled = false;
                 exportSelectedContactToolStripMenuItem.Enabled = false;
-
             }
             else
             {
-                checkBoxExport.CheckState = CheckState.Checked;
+                dbCredentialsInst.enableExport = 1;
+                checkBoxExport.CheckState = (CheckState)dbCredentialsInst.enableExport;
                 setDBconnSettings.Enabled = true;
                 exportSelectedContactToolStripMenuItem.Enabled = true;
+            }
+            using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+            {
+                conn.Update(dbCredentialsInst);
             }
         }
 
