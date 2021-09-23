@@ -130,17 +130,20 @@ namespace SebContactsApp
             makeSelection(myIndex);
         }
 
-        private void enableDBExport(object sender, EventArgs e)
+        private void enableDBExport_click(object sender, EventArgs e)
         {
             if(checkBoxExport.CheckState == CheckState.Checked)
             {
                 checkBoxExport.CheckState = CheckState.Unchecked;
                 setDBconnSettings.Enabled = false;
+                exportSelectedContactToolStripMenuItem.Enabled = false;
+
             }
             else
             {
                 checkBoxExport.CheckState = CheckState.Checked;
                 setDBconnSettings.Enabled = true;
+                exportSelectedContactToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -172,8 +175,6 @@ namespace SebContactsApp
             connection = new SqlConnection(connString);
             try
             {
-                var selectedId = 0;
-
                 selectCompanyWindow selectCompanyWindow = new selectCompanyWindow();
                 selectCompanyWindow.ShowDialog();
 

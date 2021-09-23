@@ -53,9 +53,7 @@ namespace SebContactsApp
         private void exportButton_Click(object sender, EventArgs e)
         {
             selectedId = ((DataRowView)companyListDropdown.SelectedItem).Row[0];
-
             MessageBox.Show($"{selectedId}");
-
             Close();
         }
     }

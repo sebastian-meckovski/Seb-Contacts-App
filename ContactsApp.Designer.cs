@@ -91,10 +91,11 @@ namespace SebContactsApp
             this.checkBoxExport.Name = "checkBoxExport";
             this.checkBoxExport.Size = new System.Drawing.Size(259, 26);
             this.checkBoxExport.Text = "Enable Contact Export";
-            this.checkBoxExport.Click += new System.EventHandler(this.enableDBExport);
+            this.checkBoxExport.Click += new System.EventHandler(this.enableDBExport_click);
             // 
             // setDBconnSettings
             // 
+            this.setDBconnSettings.Enabled = false;
             this.setDBconnSettings.Name = "setDBconnSettings";
             this.setDBconnSettings.Size = new System.Drawing.Size(259, 26);
             this.setDBconnSettings.Text = "Set Database Connection";
@@ -102,6 +103,7 @@ namespace SebContactsApp
             // 
             // exportSelectedContactToolStripMenuItem
             // 
+            this.exportSelectedContactToolStripMenuItem.Enabled = false;
             this.exportSelectedContactToolStripMenuItem.Name = "exportSelectedContactToolStripMenuItem";
             this.exportSelectedContactToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
             this.exportSelectedContactToolStripMenuItem.Text = "Export Selected Contact";
@@ -116,7 +118,7 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(30, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(78, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(228, 29);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 

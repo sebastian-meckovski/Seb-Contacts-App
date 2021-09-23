@@ -20,6 +20,8 @@ namespace SebContactsApp.Model
         
         public string serverPass { get; set; }
 
+        public bool enableExport { get; set; }
+
 
     }
 }
