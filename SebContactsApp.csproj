@@ -113,7 +113,6 @@
     <Compile Include="Entities\customer_detail.cs">
       <DependentUpon>companyEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\CompanyClass.cs" />
     <Compile Include="Model\dbCredentialsModel.cs" />
     <Compile Include="ViewModel\DatabaseCredential.cs" />
     <Compile Include="Windows\selectCompanyWindow.cs">
