@@ -42,7 +42,6 @@ namespace SebContactsApp
             makeSelection(listboxContacts.Items.Count - 1);
 
             CreateSettings();
-            setEnableExportButtonStatus(DatabaseCredentials.dbCredentials[0].enableExport);
         }
 
        
@@ -127,7 +126,7 @@ namespace SebContactsApp
             int myIndex = listboxContacts.SelectedIndex;
             if (listboxContacts.Items.Count > 0)
             {
-                using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+                using (SQLiteConnection conn = new SQLiteConnection(databasePath))
                 {
                     conn.Delete(listboxContacts.SelectedItem);
                 }
@@ -152,7 +151,7 @@ namespace SebContactsApp
                 setDBconnSettings.Enabled = true;
                 exportSelectedContactToolStripMenuItem.Enabled = true;
             }
-            using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+            using (SQLiteConnection conn = new SQLiteConnection(databasePath))
             {
                 conn.Update(DatabaseCredentials.dbCredentials[0]);
             }
@@ -169,13 +168,14 @@ namespace SebContactsApp
         {
             if (DatabaseCredentials.dbCredentials.Count == 0)
             {
-                using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
+                using (SQLiteConnection conn = new SQLiteConnection(databasePath))
                 {
                     dbCredentials dbCredentials = new dbCredentials();
                     conn.Insert(dbCredentials);
-                    DatabaseCredentials.dbCredentials = conn.Table<dbCredentials>().ToList();
+                    DatabaseCredentials.dbCredentials = conn.Table<dbCredentials>().ToList(); //not sure what it does
                 }
             }
+            setEnableExportButtonStatus(DatabaseCredentials.dbCredentials[0].enableExport);
         }
 
         private void setDBconnSettings_Click(object sender, EventArgs e)
