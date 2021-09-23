@@ -15,7 +15,6 @@ using System.Data.SqlClient;
 using MetroSet_UI.Forms;
 using SebContactsApp.ViewModel;
 
-
 namespace SebContactsApp
 {
 
@@ -41,7 +40,12 @@ namespace SebContactsApp
         {
             UpdateData();
             makeSelection(listboxContacts.Items.Count - 1);
+
+            CreateSettings();
+            setEnableExportButtonStatus(DatabaseCredentials.dbCredentials[0].enableExport);
         }
+
+       
 
         private void UpdateData()
         {
@@ -53,6 +57,8 @@ namespace SebContactsApp
                 contacts = conn.Table<Contact>().ToList();
                 DatabaseCredentials.dbCredentials = conn.Table<dbCredentials>().ToList();
 
+                dbCredentials dbCredentials = new dbCredentials();
+                
                 listboxContacts.DataSource = contacts;
             }
         }
@@ -111,7 +117,7 @@ namespace SebContactsApp
                 }
                 catch
                 {
-                
+                    // Do nothing in case error happens
                 }
             }
         }
@@ -132,30 +138,35 @@ namespace SebContactsApp
 
         private void enableDBExport_click(object sender, EventArgs e)
         {
-            dbCredentials dbCredentialsInst = new dbCredentials();
             if (checkBoxExport.CheckState == (CheckState)1)
             {
-                dbCredentialsInst.enableExport = 0;
-                checkBoxExport.CheckState = (CheckState)dbCredentialsInst.enableExport;
+                DatabaseCredentials.dbCredentials[0].enableExport = 0;
+                checkBoxExport.CheckState = (CheckState)DatabaseCredentials.dbCredentials[0].enableExport;
                 setDBconnSettings.Enabled = false;
                 exportSelectedContactToolStripMenuItem.Enabled = false;
             }
             else
             {
-                dbCredentialsInst.enableExport = 1;
-                checkBoxExport.CheckState = (CheckState)dbCredentialsInst.enableExport;
+                DatabaseCredentials.dbCredentials[0].enableExport = 1;
+                checkBoxExport.CheckState = (CheckState)DatabaseCredentials.dbCredentials[0].enableExport;
                 setDBconnSettings.Enabled = true;
                 exportSelectedContactToolStripMenuItem.Enabled = true;
             }
             using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
             {
-                conn.Update(dbCredentialsInst);
+                conn.Update(DatabaseCredentials.dbCredentials[0]);
             }
         }
 
-        private void setDBconnSettings_Click(object sender, EventArgs e)
+        private void setEnableExportButtonStatus(int value)
         {
-            ConnectionStringWindow connectionStringWindow = new ConnectionStringWindow();
+            checkBoxExport.CheckState = (CheckState)value; // sets value of the of Export 
+            setDBconnSettings.Enabled = Convert.ToBoolean(value);
+            exportSelectedContactToolStripMenuItem.Enabled = Convert.ToBoolean(value);
+        }
+
+        private void CreateSettings()
+        {
             if (DatabaseCredentials.dbCredentials.Count == 0)
             {
                 using (SQLiteConnection conn = new SQLiteConnection(ContactsApp.databasePath))
@@ -165,6 +176,12 @@ namespace SebContactsApp
                     DatabaseCredentials.dbCredentials = conn.Table<dbCredentials>().ToList();
                 }
             }
+        }
+
+        private void setDBconnSettings_Click(object sender, EventArgs e)
+        {
+            ConnectionStringWindow connectionStringWindow = new ConnectionStringWindow();
+
             connectionStringWindow.dbCredentials = DatabaseCredentials.dbCredentials[0];
             connectionStringWindow.ShowDialog();
             UpdateData();
