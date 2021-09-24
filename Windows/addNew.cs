@@ -1,4 +1,5 @@
-﻿using SebContactsApp.Model;
+﻿using MetroSet_UI.Forms;
+using SebContactsApp.Model;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ using System.Windows.Forms;
 
 namespace SebContactsApp
 {
-    public partial class addNew : Form
+    public partial class addNew : MetroSetForm
     {
         public Contact contact { get; set; }
         public addNew()
