@@ -118,7 +118,7 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(30, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(228, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(78, 29);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -128,7 +128,7 @@ namespace SebContactsApp
             this.metroSetControlBox1.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
-            this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
+            this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.Silver;
             this.metroSetControlBox1.IsDerivedStyle = true;
             this.metroSetControlBox1.Location = new System.Drawing.Point(829, -1);
             this.metroSetControlBox1.MaximizeBox = true;
@@ -141,12 +141,12 @@ namespace SebContactsApp
             this.metroSetControlBox1.MinimizeNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.Name = "metroSetControlBox1";
             this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
-            this.metroSetControlBox1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetControlBox1.Style = MetroSet_UI.Enums.Style.Dark;
             this.metroSetControlBox1.StyleManager = null;
             this.metroSetControlBox1.TabIndex = 22;
             this.metroSetControlBox1.Text = "metroSetControlBox1";
             this.metroSetControlBox1.ThemeAuthor = "Narwin";
-            this.metroSetControlBox1.ThemeName = "MetroLite";
+            this.metroSetControlBox1.ThemeName = "MetroDark";
             // 
             // tableLayoutPanel3
             // 

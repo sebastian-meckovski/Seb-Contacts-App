@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace SebContactsApp
 {
-    public partial class addNew : MetroSetForm
+    public partial class addNew : Form
     {
         public Contact contact { get; set; }
         public addNew()
