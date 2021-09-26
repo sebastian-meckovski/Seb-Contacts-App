@@ -60,7 +60,7 @@ namespace SebContactsApp
             this.txtName.Location = new System.Drawing.Point(102, 2);
             this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(358, 22);
+            this.txtName.Size = new System.Drawing.Size(458, 22);
             this.txtName.TabIndex = 0;
             // 
             // txtSurname
@@ -69,7 +69,7 @@ namespace SebContactsApp
             this.txtSurname.Location = new System.Drawing.Point(102, 39);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(358, 22);
+            this.txtSurname.Size = new System.Drawing.Size(458, 22);
             this.txtSurname.TabIndex = 1;
             // 
             // btnSave
@@ -167,7 +167,7 @@ namespace SebContactsApp
             this.txtCompany.Location = new System.Drawing.Point(102, 113);
             this.txtCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(358, 22);
+            this.txtCompany.Size = new System.Drawing.Size(458, 22);
             this.txtCompany.TabIndex = 4;
             // 
             // txtAddress
@@ -176,7 +176,7 @@ namespace SebContactsApp
             this.txtAddress.Location = new System.Drawing.Point(102, 76);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(358, 22);
+            this.txtAddress.Size = new System.Drawing.Size(458, 22);
             this.txtAddress.TabIndex = 3;
             // 
             // txtEmail
@@ -185,7 +185,7 @@ namespace SebContactsApp
             this.txtEmail.Location = new System.Drawing.Point(102, 224);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(358, 22);
+            this.txtEmail.Size = new System.Drawing.Size(458, 22);
             this.txtEmail.TabIndex = 7;
             // 
             // txtPhone
@@ -194,7 +194,7 @@ namespace SebContactsApp
             this.txtPhone.Location = new System.Drawing.Point(102, 187);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(358, 22);
+            this.txtPhone.Size = new System.Drawing.Size(458, 22);
             this.txtPhone.TabIndex = 6;
             // 
             // txtPosition
@@ -203,13 +203,13 @@ namespace SebContactsApp
             this.txtPosition.Location = new System.Drawing.Point(102, 150);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(358, 22);
+            this.txtPosition.Size = new System.Drawing.Size(458, 22);
             this.txtPosition.TabIndex = 5;
             // 
             // btnCancel
             // 
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCancel.Location = new System.Drawing.Point(360, 298);
+            this.btnCancel.Location = new System.Drawing.Point(460, 298);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 33);
@@ -223,8 +223,9 @@ namespace SebContactsApp
             this.txtURL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtURL.Location = new System.Drawing.Point(2, 2);
             this.txtURL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtURL.Multiline = true;
             this.txtURL.Name = "txtURL";
-            this.txtURL.Size = new System.Drawing.Size(326, 22);
+            this.txtURL.Size = new System.Drawing.Size(414, 27);
             this.txtURL.TabIndex = 20;
             // 
             // Label8
@@ -240,12 +241,13 @@ namespace SebContactsApp
             // 
             // btnBrowse
             // 
+            this.btnBrowse.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBrowse.FlatAppearance.BorderSize = 2;
-            this.btnBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(332, 2);
+            this.btnBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 4.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Location = new System.Drawing.Point(422, 2);
             this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(22, 22);
+            this.btnBrowse.Size = new System.Drawing.Size(32, 27);
             this.btnBrowse.TabIndex = 22;
             this.btnBrowse.Text = "...";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -288,32 +290,32 @@ namespace SebContactsApp
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(462, 333);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(562, 333);
             this.tableLayoutPanel1.TabIndex = 23;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.96482F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.035176F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel2.Controls.Add(this.btnBrowse, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtURL, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(103, 262);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(356, 31);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(456, 31);
             this.tableLayoutPanel2.TabIndex = 24;
             // 
             // addNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 353);
+            this.ClientSize = new System.Drawing.Size(582, 353);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(500, 400);
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "addNew";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.ShowIcon = false;
