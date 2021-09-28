@@ -54,10 +54,7 @@ namespace SebContactsApp
                 conn.CreateTable<dbCredentials>();
 
                 contacts = conn.Table<Contact>().ToList();
-                DatabaseCredentials.dbCredentials = conn.Table<dbCredentials>().ToList();
-
-                dbCredentials dbCredentials = new dbCredentials();
-                
+                               
                 listboxContacts.DataSource = contacts;
             }
         }
@@ -139,21 +136,21 @@ namespace SebContactsApp
         {
             if (checkBoxExport.CheckState == (CheckState)1)
             {
-                DatabaseCredentials.dbCredentials[0].enableExport = 0;
-                checkBoxExport.CheckState = (CheckState)DatabaseCredentials.dbCredentials[0].enableExport;
+                DatabaseCredentials.dbCredential.enableExport = 0;
+                checkBoxExport.CheckState = (CheckState)DatabaseCredentials.dbCredential.enableExport;
                 setDBconnSettings.Enabled = false;
                 exportSelectedContactToolStripMenuItem.Enabled = false;
             }
             else
             {
-                DatabaseCredentials.dbCredentials[0].enableExport = 1;
-                checkBoxExport.CheckState = (CheckState)DatabaseCredentials.dbCredentials[0].enableExport;
+                DatabaseCredentials.dbCredential.enableExport = 1;
+                checkBoxExport.CheckState = (CheckState)DatabaseCredentials.dbCredential.enableExport;
                 setDBconnSettings.Enabled = true;
                 exportSelectedContactToolStripMenuItem.Enabled = true;
             }
             using (SQLiteConnection conn = new SQLiteConnection(databasePath))
             {
-                conn.Update(DatabaseCredentials.dbCredentials[0]);
+                conn.Update(DatabaseCredentials.dbCredential);
             }
         }
 
@@ -166,36 +163,36 @@ namespace SebContactsApp
 
         private void CreateSettings()
         {
-            if (DatabaseCredentials.dbCredentials.Count == 0)
+            if (DatabaseCredentials.dbCredential==null)
             {
+                
                 using (SQLiteConnection conn = new SQLiteConnection(databasePath))
                 {
-                    dbCredentials dbCredentials = new dbCredentials();
-                    conn.Insert(dbCredentials);
-                    DatabaseCredentials.dbCredentials = conn.Table<dbCredentials>().ToList(); //not sure what it does
+                    DatabaseCredentials.dbCredential = conn.Table<dbCredentials>().FirstOrDefault(); //not sure what it does
+                    if (DatabaseCredentials.dbCredential == null)
+                    {
+                        dbCredentials dbCredentials = new dbCredentials();
+                        conn.Insert(dbCredentials);
+                        DatabaseCredentials.dbCredential = conn.Table<dbCredentials>().FirstOrDefault(); //not sure what it does
+                    }                    
                 }
             }
-            setEnableExportButtonStatus(DatabaseCredentials.dbCredentials[0].enableExport);
+            setEnableExportButtonStatus(DatabaseCredentials.dbCredential.enableExport);
         }
 
         private void setDBconnSettings_Click(object sender, EventArgs e)
         {
             ConnectionStringWindow connectionStringWindow = new ConnectionStringWindow();
 
-            connectionStringWindow.dbCredentials = DatabaseCredentials.dbCredentials[0];
+            connectionStringWindow.dbCredentials = DatabaseCredentials.dbCredential;
             connectionStringWindow.ShowDialog();
             UpdateData();
         }
 
         private void ExportSelected_Click(object sender, EventArgs e)
         {
-            var connString = $@"Server={DatabaseCredentials.dbCredentials[0].serverName};
-                                Database={DatabaseCredentials.dbCredentials[0].dbName};
-                                User Id={DatabaseCredentials.dbCredentials[0].serverLogin};
-                                Password={DatabaseCredentials.dbCredentials[0].serverPass};"; // maybe we can store it somewhere else?
-
-
-            connection = new SqlConnection(connString);
+            
+            connection = new SqlConnection(DatabaseCredentials.connectionString);
             try
             {
                 selectCompanyWindow selectCompanyWindow = new selectCompanyWindow();

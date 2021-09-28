@@ -95,24 +95,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\companyEntity.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>companyEntity.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\companyEntity.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>companyEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\companyEntity.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>companyEntity.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\customer_detail.cs">
-      <DependentUpon>companyEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\dbCredentialsModel.cs" />
     <Compile Include="ViewModel\DatabaseCredential.cs" />
     <Compile Include="Windows\selectCompanyWindow.cs">
@@ -164,13 +146,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Entities\companyEntity.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>companyEntity.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Entities\companyEntity.edmx.diagram">
-      <DependentUpon>companyEntity.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -187,16 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\configuration+settings+icon-1320191040059302570.png" />
-    <Content Include="Entities\companyEntity.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>companyEntity.edmx</DependentUpon>
-      <LastGenOutput>companyEntity.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Entities\companyEntity.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>companyEntity.edmx</DependentUpon>
-      <LastGenOutput>companyEntity.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\contacts-app-icon-24.png" />
     <Content Include="Resources\DefaultImage.jpg" />
     <None Include="Resources\export.png" />

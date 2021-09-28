@@ -9,6 +9,17 @@ namespace SebContactsApp.ViewModel
 {
     public static class DatabaseCredentials
     {
-        public static List<dbCredentials> dbCredentials { get; set; }
+        
+        public static dbCredentials dbCredential { get; set; }
+        public static string connectionString
+        {
+            get
+            {
+                return $@"Server={dbCredential.serverName};
+                          Database={dbCredential.dbName};
+                          User Id={dbCredential.serverLogin};
+                          Password={dbCredential.serverPass};";
+            }
+        }
     }
 }

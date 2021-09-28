@@ -1,5 +1,4 @@
-﻿using SebContactsApp.Entities;
-using SebContactsApp.Model;
+﻿using SebContactsApp.Model;
 using SebContactsApp.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -27,13 +26,10 @@ namespace SebContactsApp
 
         private void selectContactWindow_Load(object sender, EventArgs e)
         {
-            var connString = $@"Server={DatabaseCredentials.dbCredentials[0].serverName};
-                                Database={DatabaseCredentials.dbCredentials[0].dbName};
-                                User Id={DatabaseCredentials.dbCredentials[0].serverLogin};
-                                Password={DatabaseCredentials.dbCredentials[0].serverPass};";
-
+            
+            
             SqlConnection connection;
-            connection = new SqlConnection(connString);
+            connection = new SqlConnection(DatabaseCredentials.connectionString);
             if (connection.State == ConnectionState.Closed)
             {
                 connection.Open();

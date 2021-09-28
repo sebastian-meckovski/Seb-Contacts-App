@@ -118,7 +118,7 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(30, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(78, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(80, 30);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 

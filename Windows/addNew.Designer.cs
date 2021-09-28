@@ -58,7 +58,7 @@ namespace SebContactsApp
             // 
             this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtName.Location = new System.Drawing.Point(102, 2);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(458, 22);
             this.txtName.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace SebContactsApp
             // 
             this.txtSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSurname.Location = new System.Drawing.Point(102, 39);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(458, 22);
             this.txtSurname.TabIndex = 1;
@@ -76,7 +76,7 @@ namespace SebContactsApp
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Location = new System.Drawing.Point(2, 298);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(96, 33);
             this.btnSave.TabIndex = 2;
@@ -165,7 +165,7 @@ namespace SebContactsApp
             // 
             this.txtCompany.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCompany.Location = new System.Drawing.Point(102, 113);
-            this.txtCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCompany.Margin = new System.Windows.Forms.Padding(2);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(458, 22);
             this.txtCompany.TabIndex = 4;
@@ -174,7 +174,7 @@ namespace SebContactsApp
             // 
             this.txtAddress.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAddress.Location = new System.Drawing.Point(102, 76);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(458, 22);
             this.txtAddress.TabIndex = 3;
@@ -183,7 +183,7 @@ namespace SebContactsApp
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Location = new System.Drawing.Point(102, 224);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(458, 22);
             this.txtEmail.TabIndex = 7;
@@ -192,7 +192,7 @@ namespace SebContactsApp
             // 
             this.txtPhone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPhone.Location = new System.Drawing.Point(102, 187);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(458, 22);
             this.txtPhone.TabIndex = 6;
@@ -201,7 +201,7 @@ namespace SebContactsApp
             // 
             this.txtPosition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPosition.Location = new System.Drawing.Point(102, 150);
-            this.txtPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(2);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(458, 22);
             this.txtPosition.TabIndex = 5;
@@ -210,7 +210,7 @@ namespace SebContactsApp
             // 
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancel.Location = new System.Drawing.Point(460, 298);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 33);
             this.btnCancel.TabIndex = 19;
@@ -222,7 +222,7 @@ namespace SebContactsApp
             // 
             this.txtURL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtURL.Location = new System.Drawing.Point(2, 2);
-            this.txtURL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtURL.Margin = new System.Windows.Forms.Padding(2);
             this.txtURL.Multiline = true;
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(414, 27);
@@ -314,7 +314,7 @@ namespace SebContactsApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 353);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "addNew";
             this.Padding = new System.Windows.Forms.Padding(10);
