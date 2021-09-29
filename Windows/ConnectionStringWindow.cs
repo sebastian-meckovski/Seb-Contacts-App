@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SebContactsApp.Model;
+using SebContactsApp.ViewModel;
+using System.Data.SqlClient;
 
 namespace SebContactsApp
 {
@@ -45,6 +47,29 @@ namespace SebContactsApp
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnTestConnection_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string testConnectionString;
+                testConnectionString = $@"Server={txtServerName.Text};
+                                          Database={txtDbName.Text};
+                                          User Id={txtServerLogin.Text};
+                                          Password={txtServerPass.Text};";
+
+                SqlConnection sqlConnection;
+                sqlConnection = new SqlConnection(testConnectionString);
+
+                sqlConnection.Open();
+                MessageBox.Show("success!");
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
