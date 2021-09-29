@@ -44,8 +44,6 @@ namespace SebContactsApp
             CreateSettings();
         }
 
-       
-
         private void UpdateData()
         {
             using (SQLiteConnection conn = new SQLiteConnection(databasePath))
