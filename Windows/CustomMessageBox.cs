@@ -21,5 +21,10 @@ namespace SebContactsApp
         {
 
         }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -170,8 +170,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icon1.jpg" />
+    <None Include="Resources\Icon1.ico" />
     <None Include="Resources\configuration+settings+icon-1320191040059302570.png" />
     <None Include="Resources\contacts-app-icon-24.png" />
+    <None Include="Resources\camera_test.ico" />
+    <None Include="Resources\camera_test-0.png" />
     <Content Include="Resources\DefaultImage.jpg" />
     <None Include="Resources\export.png" />
     <Content Include="Resources\icon.jpg" />
