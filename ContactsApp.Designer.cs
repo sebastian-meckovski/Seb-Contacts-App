@@ -89,7 +89,7 @@ namespace SebContactsApp
             // checkBoxExport
             // 
             this.checkBoxExport.Name = "checkBoxExport";
-            this.checkBoxExport.Size = new System.Drawing.Size(259, 26);
+            this.checkBoxExport.Size = new System.Drawing.Size(206, 22);
             this.checkBoxExport.Text = "Enable Contact Export";
             this.checkBoxExport.Click += new System.EventHandler(this.enableDBExport_click);
             // 
@@ -97,7 +97,7 @@ namespace SebContactsApp
             // 
             this.setDBconnSettings.Enabled = false;
             this.setDBconnSettings.Name = "setDBconnSettings";
-            this.setDBconnSettings.Size = new System.Drawing.Size(259, 26);
+            this.setDBconnSettings.Size = new System.Drawing.Size(206, 22);
             this.setDBconnSettings.Text = "Set Database Connection";
             this.setDBconnSettings.Click += new System.EventHandler(this.setDBconnSettings_Click);
             // 
@@ -105,7 +105,7 @@ namespace SebContactsApp
             // 
             this.exportSelectedContactToolStripMenuItem.Enabled = false;
             this.exportSelectedContactToolStripMenuItem.Name = "exportSelectedContactToolStripMenuItem";
-            this.exportSelectedContactToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
+            this.exportSelectedContactToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.exportSelectedContactToolStripMenuItem.Text = "Export Selected Contact";
             this.exportSelectedContactToolStripMenuItem.Click += new System.EventHandler(this.ExportSelected_Click);
             // 
@@ -118,7 +118,7 @@ namespace SebContactsApp
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(30, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(80, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(78, 29);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -189,7 +189,7 @@ namespace SebContactsApp
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblName.Location = new System.Drawing.Point(99, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(355, 24);
+            this.lblName.Size = new System.Drawing.Size(355, 18);
             this.lblName.TabIndex = 13;
             this.lblName.Text = "N/A";
             // 
@@ -199,7 +199,7 @@ namespace SebContactsApp
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblEmail.Location = new System.Drawing.Point(99, 260);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(42, 24);
+            this.lblEmail.Size = new System.Drawing.Size(32, 18);
             this.lblEmail.TabIndex = 18;
             this.lblEmail.Text = "N/A";
             // 
@@ -222,7 +222,7 @@ namespace SebContactsApp
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblPhone.Location = new System.Drawing.Point(99, 208);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(42, 24);
+            this.lblPhone.Size = new System.Drawing.Size(32, 18);
             this.lblPhone.TabIndex = 17;
             this.lblPhone.Text = "N/A";
             // 
@@ -245,7 +245,7 @@ namespace SebContactsApp
             this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblPosition.Location = new System.Drawing.Point(99, 156);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(42, 24);
+            this.lblPosition.Size = new System.Drawing.Size(32, 18);
             this.lblPosition.TabIndex = 16;
             this.lblPosition.Text = "N/A";
             // 
@@ -268,7 +268,7 @@ namespace SebContactsApp
             this.lblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblCompany.Location = new System.Drawing.Point(99, 104);
             this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(42, 24);
+            this.lblCompany.Size = new System.Drawing.Size(32, 18);
             this.lblCompany.TabIndex = 15;
             this.lblCompany.Text = "N/A";
             // 
@@ -291,7 +291,7 @@ namespace SebContactsApp
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblAddress.Location = new System.Drawing.Point(99, 52);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(42, 24);
+            this.lblAddress.Size = new System.Drawing.Size(32, 18);
             this.lblAddress.TabIndex = 14;
             this.lblAddress.Text = "N/A";
             // 
@@ -314,7 +314,7 @@ namespace SebContactsApp
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 48);
+            this.label1.Size = new System.Drawing.Size(75, 18);
             this.label1.TabIndex = 19;
             this.label1.Text = "Full Name";
             // 
@@ -324,13 +324,13 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listboxContacts.DisplayMember = "FullName";
-            this.listboxContacts.Font = new System.Drawing.Font("Keep Calm Med", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listboxContacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listboxContacts.FormattingEnabled = true;
-            this.listboxContacts.ItemHeight = 44;
+            this.listboxContacts.ItemHeight = 30;
             this.listboxContacts.Location = new System.Drawing.Point(3, 3);
             this.listboxContacts.Name = "listboxContacts";
             this.tableLayoutPanel1.SetRowSpan(this.listboxContacts, 2);
-            this.listboxContacts.Size = new System.Drawing.Size(456, 488);
+            this.listboxContacts.Size = new System.Drawing.Size(456, 484);
             this.listboxContacts.TabIndex = 4;
             this.listboxContacts.SelectedIndexChanged += new System.EventHandler(this.selectionChanged);
             this.listboxContacts.DoubleClick += new System.EventHandler(this.btnEdit_Click);

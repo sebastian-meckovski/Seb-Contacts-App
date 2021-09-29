@@ -95,6 +95,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Windows\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\dbCredentialsModel.cs" />
     <Compile Include="ViewModel\DatabaseCredential.cs" />
     <Compile Include="Windows\selectCompanyWindow.cs">
@@ -124,6 +130,9 @@
     <Compile Include="Model\ContactModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Windows\CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\selectCompanyWindow.resx">
       <DependentUpon>selectCompanyWindow.cs</DependentUpon>
     </EmbeddedResource>
