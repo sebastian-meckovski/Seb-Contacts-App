@@ -48,7 +48,7 @@ namespace SebContactsApp
 
         private void exportButton_Click(object sender, EventArgs e)
         {
-            selectedId = ((DataRowView)companyListDropdown.SelectedItem).Row[0];
+            selectedId = ((DataRowView)companyListDropdown.SelectedItem).Row["cd_id"];
             Close();
         }
     }
