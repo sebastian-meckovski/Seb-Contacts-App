@@ -63,7 +63,11 @@ namespace SebContactsApp
                 sqlConnection = new SqlConnection(testConnectionString);
 
                 sqlConnection.Open();
-                MessageBox.Show("success!");
+
+                CustomMessageBox cmb = new CustomMessageBox();
+                cmb.label1.Text = $"Connection to {txtServerName.Text} was successful";
+                cmb.ShowDialog();
+
                 sqlConnection.Close();
             }
             catch (Exception ex)
