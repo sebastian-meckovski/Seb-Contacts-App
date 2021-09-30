@@ -215,19 +215,16 @@ namespace SebContactsApp
 
                 int newId = (int)contactCommand.ExecuteScalar();
 
-
-                //MessageBox.Show($"The ID insterted is {newId} and it should be centered");
-
                 addressCommand = new SqlCommand("INSERT INTO customer_contact_address(ccad_cc_id, ccad_address1)" +
                                                 $"VALUES({newId}, '{((Contact)listboxContacts.SelectedItem).Address}')", connection);
 
                 CustomMessageBox cmb = new CustomMessageBox();
                 cmb.label1.Text = $"{((Contact)listboxContacts.SelectedItem).FullName} contact has been successfully exported to OrderWise Database";
+                cmb.Text = "Customer Exported Successfully";
                 cmb.ShowDialog();
 
                 addressCommand.ExecuteNonQuery();
 
-                //MessageBox.Show("Success!");
                 connection.Close();
             }
             catch (Exception ex)

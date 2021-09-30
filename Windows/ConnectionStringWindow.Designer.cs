@@ -122,7 +122,7 @@ namespace SebContactsApp
             // 
             this.btnCredSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCredSave.Location = new System.Drawing.Point(2, 2);
-            this.btnCredSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCredSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnCredSave.Name = "btnCredSave";
             this.btnCredSave.Size = new System.Drawing.Size(160, 23);
             this.btnCredSave.TabIndex = 8;
@@ -134,7 +134,7 @@ namespace SebContactsApp
             // 
             this.btnTestConnection.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnTestConnection.Location = new System.Drawing.Point(166, 2);
-            this.btnTestConnection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTestConnection.Margin = new System.Windows.Forms.Padding(2);
             this.btnTestConnection.Name = "btnTestConnection";
             this.btnTestConnection.Size = new System.Drawing.Size(160, 23);
             this.btnTestConnection.TabIndex = 9;
@@ -146,7 +146,7 @@ namespace SebContactsApp
             // 
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancel.Location = new System.Drawing.Point(330, 2);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(160, 23);
             this.btnCancel.TabIndex = 10;
@@ -166,7 +166,7 @@ namespace SebContactsApp
             this.tableLayoutPanel2.Controls.Add(this.btnCredSave, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 126);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -189,7 +189,7 @@ namespace SebContactsApp
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(8, 8);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 5;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -208,7 +208,7 @@ namespace SebContactsApp
             this.Controls.Add(this.tableLayoutPanel3);
             this.MinimumSize = new System.Drawing.Size(378, 209);
             this.Name = "ConnectionStringWindow";
-            this.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Padding = new System.Windows.Forms.Padding(8);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Database Connection Details";

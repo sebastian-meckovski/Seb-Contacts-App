@@ -56,7 +56,7 @@ namespace SebContactsApp
             this.companyListDropdown.IsDerivedStyle = true;
             this.companyListDropdown.ItemHeight = 20;
             this.companyListDropdown.Location = new System.Drawing.Point(227, 2);
-            this.companyListDropdown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.companyListDropdown.Margin = new System.Windows.Forms.Padding(2);
             this.companyListDropdown.Name = "companyListDropdown";
             this.companyListDropdown.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.companyListDropdown.SelectedItemForeColor = System.Drawing.Color.White;
@@ -72,7 +72,7 @@ namespace SebContactsApp
             this.exportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tableLayoutPanel1.SetColumnSpan(this.exportButton, 2);
             this.exportButton.Location = new System.Drawing.Point(208, 35);
-            this.exportButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exportButton.Margin = new System.Windows.Forms.Padding(2);
             this.exportButton.Name = "exportButton";
             this.exportButton.Size = new System.Drawing.Size(108, 24);
             this.exportButton.TabIndex = 1;
@@ -106,7 +106,7 @@ namespace SebContactsApp
             this.tableLayoutPanel1.Controls.Add(this.companyListDropdown, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 5);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -120,9 +120,9 @@ namespace SebContactsApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 71);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "selectCompanyWindow";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Select Company";
             this.Load += new System.EventHandler(this.selectContactWindow_Load);

@@ -79,9 +79,9 @@ namespace SebContactsApp
             this.ClientSize = new System.Drawing.Size(384, 111);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(400, 150);
             this.Name = "CustomMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Customer Exported Successfully";
             this.Load += new System.EventHandler(this.CustomMessageBox_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

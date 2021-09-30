@@ -65,6 +65,7 @@ namespace SebContactsApp
                 sqlConnection.Open();
 
                 CustomMessageBox cmb = new CustomMessageBox();
+                cmb.Text = "Connection Status";
                 cmb.label1.Text = $"Connection to {txtServerName.Text} was successful";
                 cmb.ShowDialog();
 
