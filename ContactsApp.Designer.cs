@@ -30,6 +30,7 @@ namespace SebContactsApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactsApp));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxExport = new System.Windows.Forms.ToolStripMenuItem();
@@ -469,6 +470,7 @@ namespace SebContactsApp
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ContactsApp";
             this.SmallLineColor1 = System.Drawing.Color.SteelBlue;
