@@ -1,2 +1,2 @@
-# SebContactsApp
-WPF Application for storing contacts
+# Contacts App by Seb
+Windows Forms Application for storing contacts. 
