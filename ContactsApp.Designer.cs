@@ -131,7 +131,7 @@ namespace SebContactsApp
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.Silver;
             this.metroSetControlBox1.IsDerivedStyle = true;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(829, -1);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(700, -1);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -169,7 +169,7 @@ namespace SebContactsApp
             this.tableLayoutPanel3.Controls.Add(this.lblAddress, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label6, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(465, 259);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(401, 256);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel1.SetRowSpan(this.tableLayoutPanel3, 2);
@@ -179,7 +179,7 @@ namespace SebContactsApp
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(457, 314);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(392, 310);
             this.tableLayoutPanel3.TabIndex = 22;
             // 
             // lblName
@@ -190,7 +190,7 @@ namespace SebContactsApp
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblName.Location = new System.Drawing.Point(99, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(355, 18);
+            this.lblName.Size = new System.Drawing.Size(290, 18);
             this.lblName.TabIndex = 13;
             this.lblName.Text = "N/A";
             // 
@@ -198,7 +198,7 @@ namespace SebContactsApp
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblEmail.Location = new System.Drawing.Point(99, 260);
+            this.lblEmail.Location = new System.Drawing.Point(99, 255);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 18);
             this.lblEmail.TabIndex = 18;
@@ -211,9 +211,9 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 52);
+            this.label2.Location = new System.Drawing.Point(3, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 52);
+            this.label2.Size = new System.Drawing.Size(90, 51);
             this.label2.TabIndex = 7;
             this.label2.Text = "Address:";
             // 
@@ -221,7 +221,7 @@ namespace SebContactsApp
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblPhone.Location = new System.Drawing.Point(99, 208);
+            this.lblPhone.Location = new System.Drawing.Point(99, 204);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(32, 18);
             this.lblPhone.TabIndex = 17;
@@ -234,9 +234,9 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(3, 104);
+            this.label3.Location = new System.Drawing.Point(3, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 52);
+            this.label3.Size = new System.Drawing.Size(90, 51);
             this.label3.TabIndex = 8;
             this.label3.Text = "Company:";
             // 
@@ -244,7 +244,7 @@ namespace SebContactsApp
             // 
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblPosition.Location = new System.Drawing.Point(99, 156);
+            this.lblPosition.Location = new System.Drawing.Point(99, 153);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(32, 18);
             this.lblPosition.TabIndex = 16;
@@ -257,9 +257,9 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(3, 156);
+            this.label4.Location = new System.Drawing.Point(3, 153);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 52);
+            this.label4.Size = new System.Drawing.Size(90, 51);
             this.label4.TabIndex = 9;
             this.label4.Text = "Position:";
             // 
@@ -267,7 +267,7 @@ namespace SebContactsApp
             // 
             this.lblCompany.AutoSize = true;
             this.lblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblCompany.Location = new System.Drawing.Point(99, 104);
+            this.lblCompany.Location = new System.Drawing.Point(99, 102);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(32, 18);
             this.lblCompany.TabIndex = 15;
@@ -280,9 +280,9 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label5.Location = new System.Drawing.Point(3, 208);
+            this.label5.Location = new System.Drawing.Point(3, 204);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 52);
+            this.label5.Size = new System.Drawing.Size(90, 51);
             this.label5.TabIndex = 10;
             this.label5.Text = "Phone:";
             // 
@@ -290,7 +290,7 @@ namespace SebContactsApp
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblAddress.Location = new System.Drawing.Point(99, 52);
+            this.lblAddress.Location = new System.Drawing.Point(99, 51);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(32, 18);
             this.lblAddress.TabIndex = 14;
@@ -303,9 +303,9 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(3, 260);
+            this.label6.Location = new System.Drawing.Point(3, 255);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 54);
+            this.label6.Size = new System.Drawing.Size(90, 55);
             this.label6.TabIndex = 11;
             this.label6.Text = "Email:";
             // 
@@ -331,7 +331,7 @@ namespace SebContactsApp
             this.listboxContacts.Location = new System.Drawing.Point(3, 3);
             this.listboxContacts.Name = "listboxContacts";
             this.tableLayoutPanel1.SetRowSpan(this.listboxContacts, 2);
-            this.listboxContacts.Size = new System.Drawing.Size(456, 484);
+            this.listboxContacts.Size = new System.Drawing.Size(392, 484);
             this.listboxContacts.TabIndex = 4;
             this.listboxContacts.SelectedIndexChanged += new System.EventHandler(this.selectionChanged);
             this.listboxContacts.DoubleClick += new System.EventHandler(this.btnEdit_Click);
@@ -348,11 +348,11 @@ namespace SebContactsApp
             this.tableLayoutPanel2.Controls.Add(this.btnEdit, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAddNew, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 515);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 509);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(456, 58);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(392, 57);
             this.tableLayoutPanel2.TabIndex = 22;
             // 
             // btnEdit
@@ -360,9 +360,9 @@ namespace SebContactsApp
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(155, 3);
+            this.btnEdit.Location = new System.Drawing.Point(133, 3);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(146, 52);
+            this.btnEdit.Size = new System.Drawing.Size(124, 51);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -373,9 +373,9 @@ namespace SebContactsApp
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(307, 3);
+            this.button3.Location = new System.Drawing.Point(263, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 52);
+            this.button3.Size = new System.Drawing.Size(126, 51);
             this.button3.TabIndex = 3;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
@@ -388,7 +388,7 @@ namespace SebContactsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddNew.Location = new System.Drawing.Point(3, 3);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(146, 52);
+            this.btnAddNew.Size = new System.Drawing.Size(124, 51);
             this.btnAddNew.TabIndex = 5;
             this.btnAddNew.Text = "Add";
             this.btnAddNew.UseVisualStyleBackColor = true;
@@ -414,7 +414,7 @@ namespace SebContactsApp
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 576);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 569);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
             // tableLayoutPanel4
@@ -425,11 +425,11 @@ namespace SebContactsApp
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.image, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(465, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(401, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(457, 250);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(392, 247);
             this.tableLayoutPanel4.TabIndex = 22;
             // 
             // image
@@ -443,7 +443,7 @@ namespace SebContactsApp
             this.image.InitialImage = null;
             this.image.Location = new System.Drawing.Point(3, 3);
             this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(451, 244);
+            this.image.Size = new System.Drawing.Size(386, 241);
             this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.image.TabIndex = 19;
             this.image.TabStop = false;
@@ -465,13 +465,14 @@ namespace SebContactsApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(929, 607);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.windowIcon);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "ContactsApp";
             this.SmallLineColor1 = System.Drawing.Color.SteelBlue;
             this.SmallLineColor2 = System.Drawing.Color.SteelBlue;
